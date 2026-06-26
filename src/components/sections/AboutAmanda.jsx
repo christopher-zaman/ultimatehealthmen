@@ -7,7 +7,7 @@ function AboutAmanda() {
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
 
         {/* Portrait */}
-        <div className="order-2 lg:order-1">
+        <div className="order-2 lg:order-1 relative overflow-hidden">
           <div className="relative [perspective:1400px]">
             <RevealImage
               src={amanda}
