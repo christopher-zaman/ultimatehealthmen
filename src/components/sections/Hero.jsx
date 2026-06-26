@@ -8,7 +8,7 @@ function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#667085]">
-            Ultimate Health Men
+            Better health. Stronger you. Better life.
           </p>
 
           <h1 className="mt-6 max-w-4xl text-5xl font-semibold tracking-[-0.06em] text-[#1d1d1f] sm:text-6xl lg:text-8xl">
@@ -16,8 +16,8 @@ function Hero() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-[#667085] sm:text-xl sm:leading-9">
-            Personalized healthcare for men focused on energy, hormones, weight
-            management, sexual wellness, and long-term health.
+            Direct primary care for men focused on energy, hormone health, sexual
+            wellness, weight management, prevention, and long-term vitality.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -76,11 +76,11 @@ function Hero() {
           </div>
 
           <div className="absolute -bottom-7 left-5 right-5 rounded-3xl bg-white/90 p-5 shadow-xl ring-1 ring-black/5 backdrop-blur sm:left-8 sm:right-auto sm:max-w-sm">
-            <p className="text-sm font-semibold text-[#1d1d1f]">
-              Private. Personal. Preventive.
+            <p className="text-sm font-semibold text-[#111827]">
+              Taking men’s health to the next level.
             </p>
             <p className="mt-1 text-sm text-[#667085]">
-              Built for men who want better access to care.
+              Private, personal care built around your goals.
             </p>
           </div>
         </div>
