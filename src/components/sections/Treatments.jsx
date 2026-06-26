@@ -1,5 +1,3 @@
-import RevealCard from "../ui/RevealCard";
-
 import {
   Activity,
   Droplets,
@@ -13,6 +11,7 @@ import {
 import Badge from "../ui/Badge";
 import IconCard from "../ui/IconCard";
 import SectionHeading from "../ui/SectionHeading";
+import RevealCard from "../ui/RevealCard";
 
 const treatments = [
   {
@@ -67,20 +66,48 @@ const treatments = [
   },
 ];
 
+const servicePills = [
+  "Hormone Health",
+  "Sexual Wellness",
+  "Weight Management",
+  "Direct Primary Care",
+  "Peptide Therapy",
+  "IV Hydration",
+  "Prevention",
+];
+
 function Treatments() {
   return (
     <section id="services" className="bg-white px-6 py-28">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <SectionHeading
             eyebrow="Services"
-            title="Men's health services built around confidence, performance, and prevention."
+            title="Men’s health care built around you."
+            text="Focused care for hormones, sexual wellness, weight management, preventive health, and the concerns men often delay talking about."
+            className="max-w-2xl"
           />
 
-          <p className="max-w-2xl text-lg leading-8 text-[#667085] lg:ml-auto">
-            Focused care for hormones, sexual wellness, weight management,
-            preventive health, and the concerns men often delay talking about.
-          </p>
+          <div className="relative min-h-[260px] rounded-[3rem] bg-[#f5f7fa] p-8 ring-1 ring-black/5">
+            <div className="radial-glow glow-green right-8 top-8 h-40 w-40 opacity-40" />
+            <div className="radial-glow glow-navy bottom-4 left-10 h-48 w-48 opacity-25" />
+
+            <div className="relative z-10 flex h-full flex-wrap content-center items-center gap-3">
+              {servicePills.map((pill, index) => (
+                <RevealCard key={pill} delay={index * 0.05}>
+                  <span
+                    className={`inline-flex rounded-full px-5 py-3 text-sm font-semibold shadow-sm ring-1 ring-black/5 ${
+                      index === 3
+                        ? "bg-[#12355b] text-white"
+                        : "bg-white/85 text-[#475467] backdrop-blur"
+                    }`}
+                  >
+                    {pill}
+                  </span>
+                </RevealCard>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mt-16 grid gap-5 md:grid-cols-2">

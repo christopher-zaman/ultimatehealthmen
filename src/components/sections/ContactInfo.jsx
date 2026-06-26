@@ -4,6 +4,8 @@ import Card from "../ui/Card";
 import SectionHeading from "../ui/SectionHeading";
 import { motion } from "motion/react";
 import RevealCard from "../ui/RevealCard";
+import ExpandingCTA from "../ui/ExpandingCTA";
+import ExpandingCallCTA from "../ui/ExpandingCallCTA";
 
 function ContactInfo() {
   return (
@@ -99,14 +101,18 @@ function ContactInfo() {
               }}
           ></motion.div>
             
-            <Button
-              href="https://app.elationemr.com/book/UltimateHealthDPC"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4"
-            >
-              Book a Visit
-            </Button>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <ExpandingCTA
+                href="https://app.elationemr.com/book/UltimateHealthDPC"
+                target="_blank"
+                rel="noreferrer"
+                delay={0.25}
+              >
+                Book a Visit
+              </ExpandingCTA>
+
+              <ExpandingCallCTA delay={0.35} variant="light" />
+            </div>
           </div>
         </div>
 

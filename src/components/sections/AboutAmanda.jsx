@@ -20,7 +20,7 @@ function AboutAmanda() {
 
             <div className="absolute bottom-6 left-6 rounded-3xl bg-white/90 p-5 shadow-xl ring-1 ring-black/5 backdrop-blur">
               <p className="text-xl font-semibold text-[#111827]">Amanda Gaskin</p>
-              <p className="mt-1 text-sm text-[#667085]">APRN • Founder</p>
+              <p className="mt-1 text-sm text-[var(--text-label)]">APRN • Founder</p>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@ function AboutAmanda() {
 
         <div className="order-1 lg:order-2">
 
-          <p className="text-sm font-semibold uppercase tracking-[0.30em] text-[#667085]">
+          <p className="text-sm font-semibold uppercase tracking-[0.30em] --brand-navy">
             Meet Amanda
           </p>
 
@@ -36,13 +36,13 @@ function AboutAmanda() {
             Care that puts people first.
           </h2>
 
-          <p className="mt-10 text-xl leading-9 text-[#667085]">
+          <p className="mt-10 font-medium text-xl leading-9 text-[var(--text-body)]">
             Amanda believes healthcare should be personal, accessible,
             and centered around long-term relationships—not rushed
             appointments.
           </p>
 
-          <p className="mt-8 text-lg leading-8 text-[#667085]">
+          <p className="mt-8 text-lg leading-8 text-[var(--text-body)]">
             As an experienced Advanced Practice Registered Nurse and
             founder of Ultimate Health Men, Amanda partners with men to
             improve energy, optimize health, address sensitive concerns,

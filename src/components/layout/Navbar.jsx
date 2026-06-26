@@ -18,14 +18,24 @@ function Navbar() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
           <Link
             to="/"
-            className="transition hover:opacity-80"
             onClick={() => setMobileOpen(false)}
+            className="flex items-center gap-3 transition hover:opacity-80"
           >
             <img
               src={logo}
               alt="Ultimate Health Men"
-              className="h-14 w-auto"
+              className="h-16 w-auto shrink-0"
             />
+
+            <div className="leading-none">
+              <p className="text-base font-semibold tracking-tight text-[#1d1d1f]">
+                Ultimate Health Men
+              </p>
+
+              <p className="mt-1 text-xs font-medium uppercase tracking-[0.22em] text-[var(--text-label)]">
+                Direct Primary Care
+              </p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -35,7 +45,7 @@ function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-[#667085] transition hover:text-[#1d1d1f]"
+                className="text-sm font-medium text-[var(--text-label)] transition hover:text-[#1d1d1f]"
               >
                 {link.label}
               </a>

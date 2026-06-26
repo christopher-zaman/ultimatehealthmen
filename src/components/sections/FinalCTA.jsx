@@ -1,4 +1,5 @@
 import Button from "../ui/Button";
+import ExpandingCTA from "../ui/ExpandingCTA";
 
 function FinalCTA() {
   return (
@@ -19,14 +20,14 @@ function FinalCTA() {
         </p>
 
         <div className="mt-10">
-          <Button
+          <ExpandingCTA
             href="https://app.elationemr.com/book/UltimateHealthDPC"
             target="_blank"
             rel="noreferrer"
             variant="light"
           >
             Book a Visit
-          </Button>
+          </ExpandingCTA>
         </div>
       </div>
     </section>
