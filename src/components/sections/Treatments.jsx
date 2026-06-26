@@ -1,3 +1,5 @@
+import RevealCard from "../ui/RevealCard";
+
 import {
   Activity,
   Droplets,
@@ -82,22 +84,27 @@ function Treatments() {
         </div>
 
         <div className="mt-16 grid gap-5 md:grid-cols-2">
-          {treatments.map((treatment) => {
+          {treatments.map((treatment, index) => {
             const featured = treatment.featured;
 
             return (
-              <IconCard
+              <RevealCard
                 key={treatment.title}
-                icon={treatment.icon}
-                title={treatment.title}
-                text={treatment.description}
-                variant={featured ? "dark" : "light"}
+                delay={featured ? 0 : index * 0.08 + 0.15}
                 className={featured ? "md:col-span-2" : ""}
               >
-                <Badge variant={featured ? "dark" : "light"}>
-                  {treatment.label}
-                </Badge>
-              </IconCard>
+                <IconCard
+                  icon={treatment.icon}
+                  title={treatment.title}
+                  text={treatment.description}
+                  variant={featured ? "dark" : "light"}
+                  className="h-full"
+                >
+                  <Badge variant={featured ? "dark" : "light"}>
+                    {treatment.label}
+                  </Badge>
+                </IconCard>
+              </RevealCard>
             );
           })}
         </div>

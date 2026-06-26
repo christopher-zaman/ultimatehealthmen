@@ -19,7 +19,7 @@ function IconCard({
       <div className="relative z-10">
         <div className="flex items-start justify-between gap-6">
           <div
-            className={`flex h-14 w-14 items-center justify-center rounded-2xl transition duration-300 group-hover:scale-105 ${
+            className={`flex h-14 w-14 items-center justify-center rounded-2xl transition duration-300 group-hover:-translate-y-1 group-hover:scale-105 ${
               isDark
                 ? "bg-white/10 text-white"
                 : "bg-white text-[#12355b] ring-1 ring-black/5"

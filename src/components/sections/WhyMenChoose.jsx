@@ -2,6 +2,7 @@ import { Brain, HeartHandshake, ShieldCheck } from "lucide-react";
 import Card from "../ui/Card";
 import IconCard from "../ui/IconCard";
 import SectionHeading from "../ui/SectionHeading";
+import RevealCard from "../ui/RevealCard";
 
 const reasons = [
   {
@@ -23,8 +24,9 @@ const reasons = [
 
 function WhyMenChoose() {
   return (
-    <section className="bg-[#f5f5f7] px-6 py-28">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative overflow-hidden bg-[#f5f5f7] px-6 py-28">
+      <div className="radial-glow glow-navy -left-40 top-20 h-96 w-96" />
+      <div className="relative z-10 mx-auto max-w-7xl">
         <Card variant="white" className="rounded-[3rem] p-8 md:p-14">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <SectionHeading
@@ -40,13 +42,18 @@ function WhyMenChoose() {
           </div>
 
           <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {reasons.map((reason) => (
-              <IconCard
+            {reasons.map((reason, index) => (
+              <RevealCard
                 key={reason.title}
-                icon={reason.icon}
-                title={reason.title}
-                text={reason.text}
-              />
+                delay={index * 0.08}
+              >
+                <IconCard
+                  icon={reason.icon}
+                  title={reason.title}
+                  text={reason.text}
+                  className="h-full"
+                />
+              </RevealCard>
             ))}
           </div>
         </Card>

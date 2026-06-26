@@ -1,6 +1,6 @@
 function Button({ href, children, variant = "primary", className = "", ...props }) {
   const base =
-    "inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 active:translate-y-0";
+    "group relative inline-flex items-center justify-center overflow-hidden rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0";
 
   const variants = {
     primary:
@@ -12,8 +12,19 @@ function Button({ href, children, variant = "primary", className = "", ...props 
   };
 
   return (
-    <a href={href} className={`${base} ${variants[variant]} ${className}`} {...props}>
-      {children}
+    <a
+      href={href}
+      className={`${base} ${variants[variant]} ${className}`}
+      {...props}
+    >
+      <span className="absolute inset-0 scale-x-0 rounded-full bg-white/15 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+
+      <span className="relative z-10 flex items-center gap-2">
+        {children}
+        <span className="translate-x-[-4px] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+          →
+        </span>
+      </span>
     </a>
   );
 }

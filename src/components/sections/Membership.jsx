@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { motion } from "motion/react";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
 import SectionHeading from "../ui/SectionHeading";
@@ -12,8 +13,10 @@ const features = [
 
 function Membership() {
   return (
-    <section className="bg-white px-6 py-28">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative overflow-hidden bg-white px-6 py-28">
+      <div className="radial-glow glow-green right-0 top-20 h-96 w-96" />
+
+      <div className="relative z-10 mx-auto max-w-7xl">
         <Card variant="light" className="rounded-[3rem] p-8 md:p-14">
           <div className="grid gap-12 md:grid-cols-[1fr_0.8fr] md:items-center">
             <SectionHeading
@@ -35,16 +38,24 @@ function Membership() {
               </div>
 
               <ul className="mt-8 space-y-4">
-                {features.map((feature) => (
-                  <li
+                {features.map((feature, index) => (
+                  <motion.li
                     key={feature}
+                    initial={{ opacity: 0, x: -25 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.45,
+                      delay: index * 0.08,
+                    }}
+                    viewport={{ once: true }}
                     className="flex items-start gap-3 text-[#667085]"
                   >
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#12355b]/10 text-[#12355b]">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgba(151,201,61,.15)] text-[var(--uhm-green)]">
                       <Check size={16} strokeWidth={2.2} />
                     </span>
+
                     <span>{feature}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
 

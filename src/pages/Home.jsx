@@ -9,22 +9,22 @@ import TrustSection from "../components/sections/TrustSection";
 import FAQ from "../components/sections/FAQ";
 import ContactInfo from "../components/sections/ContactInfo";
 import FinalCTA from "../components/sections/FinalCTA";
-
+import AnimatedSection from "../components/ui/AnimatedSection";
 function Home() {
   return (
     <>
       <>
-      <div className="reveal"><Hero /></div>
-      <div className="reveal"><WhyMenChoose /></div>
-      <div className="reveal"><Treatments /></div>
-      <div className="reveal"><WhyDPC /></div>
-      <div className="reveal"><Membership /></div>
-      <div className="reveal"><Process /></div>
-      <div className="reveal"><AboutAmanda /></div>
-      <div className="reveal"><TrustSection /></div>
-      <div className="reveal"><FAQ /></div>
-      <div className="reveal"><ContactInfo /></div>
-      <div className="reveal"><FinalCTA /></div>
+      <AnimatedSection><Hero /></AnimatedSection>
+      <AnimatedSection delay={0.05}><WhyMenChoose /></AnimatedSection>
+      <AnimatedSection delay={0.05}><Treatments /></AnimatedSection>
+      <AnimatedSection delay={0.05}><WhyDPC /></AnimatedSection>
+      <AnimatedSection delay={0.05}><Membership /></AnimatedSection>
+      <AnimatedSection delay={0.05}><Process /></AnimatedSection>
+      <AnimatedSection delay={0.05}><AboutAmanda /></AnimatedSection>
+      <AnimatedSection delay={0.05}><TrustSection /></AnimatedSection>
+      <AnimatedSection delay={0.05}><FAQ /></AnimatedSection>
+      <AnimatedSection delay={0.05}><ContactInfo /></AnimatedSection>
+      <AnimatedSection delay={0.05}><FinalCTA /></AnimatedSection>
     </>
     </>
   );

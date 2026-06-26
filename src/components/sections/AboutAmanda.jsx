@@ -1,4 +1,5 @@
 import amanda from "../../assets/images/best-mens-health-provider-amanda-gaskin.webp";
+import RevealImage from "../ui/RevealImage";
 
 function AboutAmanda() {
   return (
@@ -6,33 +7,23 @@ function AboutAmanda() {
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
 
         {/* Portrait */}
-
         <div className="order-2 lg:order-1">
-          <div className="relative h-[650px] overflow-hidden rounded-[2.5rem] shadow-2xl">
-
-            <img
+          <div className="relative [perspective:1400px]">
+            <RevealImage
               src={amanda}
               alt="Amanda Gaskin, APRN"
-              className="h-full w-full object-cover object-center"
+              from="left"
+              className="relative h-[650px] overflow-hidden rounded-[2.5rem] shadow-2xl"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
-
-            {/* Floating Credential Card */}
+            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-t from-black/15 via-transparent to-transparent" />
 
             <div className="absolute bottom-6 left-6 rounded-3xl bg-white/90 p-5 shadow-xl ring-1 ring-black/5 backdrop-blur">
-              <p className="text-xl font-semibold text-[#1d1d1f]">
-                Amanda Gaskin
-              </p>
-
-              <p className="mt-1 text-sm text-[#667085]">
-                APRN • Founder
-              </p>
+              <p className="text-xl font-semibold text-[#111827]">Amanda Gaskin</p>
+              <p className="mt-1 text-sm text-[#667085]">APRN • Founder</p>
             </div>
-
           </div>
         </div>
-
         {/* Content */}
 
         <div className="order-1 lg:order-2">
