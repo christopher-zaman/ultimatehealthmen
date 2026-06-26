@@ -75,7 +75,7 @@ function Treatments() {
             title="Men's health services built around confidence, performance, and prevention."
           />
 
-          <p className="max-w-2xl text-lg leading-8 text-[#6e6e73] lg:ml-auto">
+          <p className="max-w-2xl text-lg leading-8 text-[#667085] lg:ml-auto">
             Focused care for hormones, sexual wellness, weight management,
             preventive health, and the concerns men often delay talking about.
           </p>

@@ -1,15 +1,15 @@
 function Card({ children, variant = "light", className = "" }) {
   const variants = {
-    light: "bg-[#f5f5f7] text-[#1d1d1f]",
-    white: "bg-white text-[#1d1d1f] ring-1 ring-black/5",
-    dark: "bg-[#0b0f19] text-white",
+    light: "bg-[#eef2f6]/85 text-[#111827] ring-1 ring-white/70",
+    white: "glass-surface text-[#111827]",
+    dark: "bg-[#0b1f33] text-white",
   };
 
   return (
     <div
-      className={`rounded-[2rem] p-8 transition duration-300 ${variants[variant]} ${className}`}
+      className={`shine-card soft-shadow rounded-[2rem] p-8 transition duration-300 hover:-translate-y-1 ${variants[variant]} ${className}`}
     >
-      {children}
+      <div className="relative z-10">{children}</div>
     </div>
   );
 }

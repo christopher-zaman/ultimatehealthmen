@@ -3,7 +3,7 @@ import logo from "../../assets/logos/ultimate-health-men-logo.svg";
 
 function Footer() {
   return (
-    <footer className="bg-[#0b0f19] px-6 py-12 text-white">
+    <footer className="bg-[#0b1f33] px-6 py-12 text-white">
       <div className="mx-auto grid max-w-7xl gap-10 border-t border-white/10 pt-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
           <img

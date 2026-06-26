@@ -15,7 +15,7 @@ const benefits = [
 
 function WhyDPC() {
   return (
-    <section id="dpc" className="bg-[#0b0f19] px-6 py-24 text-white">
+    <section id="dpc" className="bg-[#0b1f33] px-6 py-24 text-white">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/50">

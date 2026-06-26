@@ -23,7 +23,7 @@ function Membership() {
             />
 
             <Card variant="white" className="p-8 shadow-sm md:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#6e6e73]">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#667085]">
                 DPC Membership
               </p>
 
@@ -31,16 +31,16 @@ function Membership() {
                 <span className="text-7xl font-semibold tracking-[-0.06em]">
                   $99
                 </span>
-                <span className="pb-3 text-[#6e6e73]">/ month</span>
+                <span className="pb-3 text-[#667085]">/ month</span>
               </div>
 
               <ul className="mt-8 space-y-4">
                 {features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-start gap-3 text-[#6e6e73]"
+                    className="flex items-start gap-3 text-[#667085]"
                   >
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#0071e3]/10 text-[#0071e3]">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#12355b]/10 text-[#12355b]">
                       <Check size={16} strokeWidth={2.2} />
                     </span>
                     <span>{feature}</span>

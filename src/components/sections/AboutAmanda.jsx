@@ -25,7 +25,7 @@ function AboutAmanda() {
                 Amanda Gaskin
               </p>
 
-              <p className="mt-1 text-sm text-[#6e6e73]">
+              <p className="mt-1 text-sm text-[#667085]">
                 APRN • Founder
               </p>
             </div>
@@ -37,7 +37,7 @@ function AboutAmanda() {
 
         <div className="order-1 lg:order-2">
 
-          <p className="text-sm font-semibold uppercase tracking-[0.30em] text-[#6e6e73]">
+          <p className="text-sm font-semibold uppercase tracking-[0.30em] text-[#667085]">
             Meet Amanda
           </p>
 
@@ -45,13 +45,13 @@ function AboutAmanda() {
             Care that puts people first.
           </h2>
 
-          <p className="mt-10 text-xl leading-9 text-[#6e6e73]">
+          <p className="mt-10 text-xl leading-9 text-[#667085]">
             Amanda believes healthcare should be personal, accessible,
             and centered around long-term relationships—not rushed
             appointments.
           </p>
 
-          <p className="mt-8 text-lg leading-8 text-[#6e6e73]">
+          <p className="mt-8 text-lg leading-8 text-[#667085]">
             As an experienced Advanced Practice Registered Nurse and
             founder of Ultimate Health Men, Amanda partners with men to
             improve energy, optimize health, address sensitive concerns,
@@ -68,7 +68,7 @@ function AboutAmanda() {
                 Advanced Practice RN
               </p>
 
-              <p className="mt-2 text-[#6e6e73]">
+              <p className="mt-2 text-[#667085]">
                 Personalized, relationship-based healthcare.
               </p>
             </div>
@@ -78,7 +78,7 @@ function AboutAmanda() {
                 Founder
               </p>
 
-              <p className="mt-2 text-[#6e6e73]">
+              <p className="mt-2 text-[#667085]">
                 Ultimate Health Men & Direct Primary Care.
               </p>
             </div>
@@ -88,7 +88,7 @@ function AboutAmanda() {
                 Men's Wellness
               </p>
 
-              <p className="mt-2 text-[#6e6e73]">
+              <p className="mt-2 text-[#667085]">
                 Hormones, prevention, weight management and longevity.
               </p>
             </div>
@@ -98,7 +98,7 @@ function AboutAmanda() {
                 Direct Access
               </p>
 
-              <p className="mt-2 text-[#6e6e73]">
+              <p className="mt-2 text-[#667085]">
                 Longer visits and direct communication.
               </p>
             </div>

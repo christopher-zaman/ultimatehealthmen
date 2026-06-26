@@ -2,7 +2,7 @@ import Button from "../ui/Button";
 
 function FinalCTA() {
   return (
-    <section id="contact" className="bg-[#0b0f19] px-6 py-28 text-white">
+    <section id="contact" className="bg-[#0b1f33] px-6 py-28 text-white">
       <div className="mx-auto max-w-5xl text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/50">
           Get Started

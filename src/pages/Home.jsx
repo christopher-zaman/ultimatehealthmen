@@ -13,17 +13,19 @@ import FinalCTA from "../components/sections/FinalCTA";
 function Home() {
   return (
     <>
-      <Hero />
-      <WhyMenChoose />
-      <Treatments />
-      <WhyDPC />
-      <Membership />
-      <Process />
-      <AboutAmanda />
-      <TrustSection />
-      <FAQ />
-      <ContactInfo />
-      <FinalCTA />
+      <>
+      <div className="reveal"><Hero /></div>
+      <div className="reveal"><WhyMenChoose /></div>
+      <div className="reveal"><Treatments /></div>
+      <div className="reveal"><WhyDPC /></div>
+      <div className="reveal"><Membership /></div>
+      <div className="reveal"><Process /></div>
+      <div className="reveal"><AboutAmanda /></div>
+      <div className="reveal"><TrustSection /></div>
+      <div className="reveal"><FAQ /></div>
+      <div className="reveal"><ContactInfo /></div>
+      <div className="reveal"><FinalCTA /></div>
+    </>
     </>
   );
 }

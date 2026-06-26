@@ -35,7 +35,7 @@ function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-[#6e6e73] transition hover:text-[#1d1d1f]"
+                className="text-sm font-medium text-[#667085] transition hover:text-[#1d1d1f]"
               >
                 {link.label}
               </a>

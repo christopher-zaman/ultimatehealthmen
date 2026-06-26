@@ -58,7 +58,7 @@ function FAQ() {
                     {faq.question}
                   </span>
 
-                  <span className="text-2xl text-[#6e6e73]">
+                  <span className="text-2xl text-[#667085]">
                     {isOpen ? "−" : "+"}
                   </span>
                 </button>
@@ -69,7 +69,7 @@ function FAQ() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-8 pb-7 leading-7 text-[#6e6e73]">
+                    <p className="px-8 pb-7 leading-7 text-[#667085]">
                       {faq.answer}
                     </p>
                   </div>

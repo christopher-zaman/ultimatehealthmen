@@ -21,7 +21,7 @@ function Process() {
     <section id="process" className="bg-[#f5f5f7] px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#6e6e73]">
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#667085]">
             How It Works
           </p>
 
@@ -33,7 +33,7 @@ function Process() {
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {steps.map((step) => (
             <article key={step.number} className="rounded-[2rem] bg-white p-8">
-              <p className="text-sm font-semibold text-[#0071e3]">
+              <p className="text-sm font-semibold text-[#12355b]">
                 {step.number}
               </p>
 
@@ -41,7 +41,7 @@ function Process() {
                 {step.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-[#6e6e73]">{step.text}</p>
+              <p className="mt-4 leading-7 text-[#667085]">{step.text}</p>
             </article>
           ))}
         </div>

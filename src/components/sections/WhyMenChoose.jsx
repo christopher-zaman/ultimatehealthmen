@@ -33,7 +33,7 @@ function WhyMenChoose() {
               className="max-w-2xl"
             />
 
-            <p className="max-w-2xl text-lg leading-8 text-[#6e6e73] lg:ml-auto">
+            <p className="max-w-2xl text-lg leading-8 text-[#667085] lg:ml-auto">
               Ultimate Health Men is designed for men who want healthcare that
               is direct, personal, preventive, and easier to talk about.
             </p>
