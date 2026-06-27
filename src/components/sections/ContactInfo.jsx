@@ -1,5 +1,4 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
-import Button from "../ui/Button";
 import Card from "../ui/Card";
 import SectionHeading from "../ui/SectionHeading";
 import { motion } from "motion/react";
