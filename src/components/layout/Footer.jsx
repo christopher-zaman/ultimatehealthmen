@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logos/ultimate-health-men-logo.svg";
+import { siteInfo } from "../../data/siteInfo";
 
 function Footer() {
   return (
@@ -21,10 +22,10 @@ function Footer() {
         <div>
           <p className="font-semibold">Explore</p>
           <div className="mt-4 flex flex-col gap-3 text-white/55">
-            <a href="/#services" className="transition hover:text-white">
+            <a href="/services" className="transition hover:text-white">
               Services
             </a>
-            <a href="/#about" className="transition hover:text-white">
+            <a href="/about" className="transition hover:text-white">
               About
             </a>
             <a href="/#faq" className="transition hover:text-white">
@@ -39,7 +40,7 @@ function Footer() {
         <div>
           <p className="font-semibold">Contact</p>
           <div className="mt-4 flex flex-col gap-3 text-white/55">
-            <a href="tel:3529016582" className="transition hover:text-white">
+            <a href={siteInfo.phoneHref} className="transition hover:text-white">
               352-901-6582
             </a>
             <span>Winter Haven, FL</span>

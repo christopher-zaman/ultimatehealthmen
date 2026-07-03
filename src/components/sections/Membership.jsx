@@ -4,6 +4,7 @@ import Card from "../ui/Card";
 import SectionHeading from "../ui/SectionHeading";
 import ExpandingCTA from "../ui/ExpandingCTA";
 import RevealCard from "../ui/RevealCard";
+import { siteInfo } from "../../data/siteInfo";
 
 const plans = [
   {
@@ -161,7 +162,7 @@ function Membership() {
                     </p>
 
                     <ExpandingCTA
-                      href="https://app.elationemr.com/book/UltimateHealthDPC"
+                      href={siteInfo.bookingUrl}
                       target="_blank"
                       rel="noreferrer"
                       variant={plan.featured ? "light" : "primary"}

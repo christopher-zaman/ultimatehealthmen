@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import RevealCard from "../ui/RevealCard";
 import ExpandingCTA from "../ui/ExpandingCTA";
 import ExpandingCallCTA from "../ui/ExpandingCallCTA";
+import { siteInfo } from "../../data/siteInfo";
 
 function ContactInfo() {
   return (
@@ -25,10 +26,10 @@ function ContactInfo() {
                 <div>
                   <p className="font-semibold">Phone</p>
                   <a
-                    href="tel:3529016582"
+                    href={siteInfo.phoneHref}
                     className="mt-1 block text-2xl font-semibold tracking-tight text-[#111827] hover:text-[#12355b]"
                   >
-                    352-901-6582
+                    {siteInfo.phone}
                   </a>
                 </div>
               </div>
@@ -44,13 +45,14 @@ function ContactInfo() {
                   <p className="font-semibold">Office</p>
 
                   <a
-                    href="https://www.google.com/maps?q=Ultimate+Health+Men,+175+Avenue+A+NW+Ste+2,+Winter+Haven,+FL+33881"
+                    href={siteInfo.googleMapsUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="mt-1 block text-[#667085] hover:text-[#12355b]"
                   >
-                    175 Avenue A NW Suite 2<br />
-                    Winter Haven, FL 33881
+                    {siteInfo.address.street}
+                    <br />
+                    {siteInfo.address.city}, {siteInfo.address.state} {siteInfo.address.zip}
                   </a>
                 </div>
               </div>
@@ -63,10 +65,10 @@ function ContactInfo() {
                 <Mail className="text-[#12355b]" size={24} />
                 <div>
                   <a
-                    href="mailto:info@ultimatehealthdpc.com"
+                    href={siteInfo.emailHref}
                     className="mt-1 block text-[#667085] hover:text-[#12355b]"
                   >
-                    info@ultimatehealthdpc.com
+                    {siteInfo.email}
                   </a>
                 </div>
               </div>
@@ -102,7 +104,7 @@ function ContactInfo() {
             
             <div className="mt-6 flex flex-wrap gap-3">
               <ExpandingCTA
-                href="https://app.elationemr.com/book/UltimateHealthDPC"
+                href={siteInfo.bookingUrl}
                 target="_blank"
                 rel="noreferrer"
                 delay={0.25}
@@ -139,7 +141,7 @@ function ContactInfo() {
         >
           <iframe
             title="Ultimate Health Men map"
-            src="https://www.google.com/maps?q=Ultimate+Health+Men,+175+Avenue+A+NW+Ste+2,+Winter+Haven,+FL+33881&output=embed"
+            src={siteInfo.googleMapsEmbedUrl}
             className="h-full min-h-[460px] w-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

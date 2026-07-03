@@ -4,7 +4,7 @@ import RevealImage from "../ui/RevealImage";
 
 function AboutAmanda() {
   return (
-    <section id="about" className="bg-white px-6 py-28">
+    <section className="bg-white px-6 py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
         <div className="relative order-2 overflow-hidden lg:order-1">
           <RevealImage

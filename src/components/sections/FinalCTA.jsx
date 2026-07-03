@@ -1,5 +1,5 @@
-import Button from "../ui/Button";
 import ExpandingCTA from "../ui/ExpandingCTA";
+import { siteInfo } from "../../data/siteInfo";
 
 function FinalCTA() {
   return (
@@ -21,7 +21,7 @@ function FinalCTA() {
 
         <div className="mt-10">
           <ExpandingCTA
-            href="https://app.elationemr.com/book/UltimateHealthDPC"
+            href={siteInfo.bookingUrl}
             target="_blank"
             rel="noreferrer"
             variant="light"

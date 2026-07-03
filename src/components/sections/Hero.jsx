@@ -4,6 +4,7 @@ import heroImage from "../../assets/images/walking.webp";
 import RevealImage from "../ui/RevealImage";
 import MouseParallax from "../ui/MouseParallax";
 import ExpandingCTA from "../ui/ExpandingCTA";
+import { siteInfo } from "../../data/siteInfo";
 
 function Hero() {
   return (
@@ -26,7 +27,7 @@ function Hero() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <ExpandingCTA
-              href="https://app.elationemr.com/book/UltimateHealthDPC"
+              href={siteInfo.bookingUrl}
               target="_blank"
               rel="noreferrer"
               delay={0.35}
@@ -34,7 +35,7 @@ function Hero() {
               Schedule Consultation
             </ExpandingCTA>
 
-            <Button href="#services" variant="light">
+            <Button href="services" variant="light">
               Explore Services
             </Button>
           </div>

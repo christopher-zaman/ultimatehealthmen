@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 
 import ExpandingCTA from "../ui/ExpandingCTA";
 import ExpandingCallCTA from "../ui/ExpandingCallCTA";
-
+import { siteInfo } from "../../data/siteInfo";
 function MobileActionBar() {
   const [visible, setVisible] = useState(false);
 
@@ -55,7 +55,7 @@ function MobileActionBar() {
             />
 
             <ExpandingCTA
-              href="https://app.elationemr.com/book/UltimateHealthDPC"
+              href={siteInfo.bookingUrl}
               className="flex-1 justify-center"
             >
               Book Visit
