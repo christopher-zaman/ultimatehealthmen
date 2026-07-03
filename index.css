@@ -7,8 +7,6 @@ body {
   /* overflow-x: hidden; */
 }
 
-
-
 :root {
   --uhm-bg: #f5f7fa;
   --uhm-surface: #ffffff;
@@ -88,11 +86,7 @@ a {
   box-shadow: 0 14px 36px rgba(15,23,42,.07);
 }
 
-
-
 /* 3D hover utility */
-
-
 /* Apple style background depth */
 .radial-glow {
   position: absolute;
@@ -101,7 +95,6 @@ a {
   filter: blur(70px);
   opacity: 0.45;
 }
-
 .glow-navy {
   background: rgba(18, 53, 91, 0.18);
 }
@@ -216,7 +209,9 @@ a {
     max-width: 100%;
   }
 }
-/* Services */
+/*========================
+        Services 
+===========================*/
 .service-page {
   width: 100%;
   overflow-x: hidden;
@@ -236,7 +231,50 @@ a {
 }
 
 .service-hero {
-  max-width: 850px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 7rem 1.5rem 4rem;
+}
+
+.service-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.service-intro {
+  max-width: 760px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+}
+
+.service-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.service-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
 }
 
 .service-intro-card {
@@ -244,6 +282,63 @@ a {
   font-size: 1.15rem;
   line-height: 1.8;
 }
+.service-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+}
+
+.service-card p {
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+.service-icon {
+  flex-shrink: 0;
+  color: var(--color-accent);
+  margin-top: 0.2rem;
+}
+.service-bottom-cta {
+  max-width: 980px;
+  margin: 0 auto 5rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-radius: 2rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+}
+.service-bottom-cta h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  margin-bottom: 1rem;
+}
+
+.service-bottom-cta p {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .service-hero {
+    padding-top: 6rem;
+  }
+
+  .service-card {
+    flex-direction: column;
+  }
+}
+
 
 .service-highlight-grid {
   display: grid;

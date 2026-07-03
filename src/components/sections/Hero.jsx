@@ -21,9 +21,7 @@ function Hero() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-[#667085] sm:text-xl sm:leading-9">
-            Direct primary care for men focused on energy, hormone health,
-            sexual wellness, weight management, prevention, and long-term
-            vitality.
+            Personalized men's healthcare focused on hormone optimization, sexual wellness, weight management, longevity, and preventive care.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">

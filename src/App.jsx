@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import MobileActionBar from "./components/layout/MobileActionBar";
 import Team from "./pages/Team";
 import ServicePage from "./pages/ServicePage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
 
       <main>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
