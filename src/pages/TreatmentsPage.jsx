@@ -2,71 +2,81 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { treatments } from "../data/treatmentsData";
 import SEO from "../components/seo/SEO";
+import { SITE_URL, SITE_NAME } from "../config/site";
 
 function TreatmentsPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `Men's Health Treatments | ${SITE_NAME}`,
+    url: `${SITE_URL}/treatments`,
+    description:
+      "Explore targeted men's health treatments including Semaglutide, Tirzepatide, TRT, PT-141, BPC-157, ALMA Duo, TriMix, IV hydration, and more.",
+    mainEntity: treatments.map((treatment) => ({
+      "@type": "MedicalBusiness",
+      name: SITE_NAME,
+      medicalSpecialty: "Physician",
+      url: `${SITE_URL}/treatment/${treatment.slug}`,
+      serviceType: treatment.title,
+    })),
+  };
+
   return (
     <>
-    <SEO
-      title="Men's Health Treatments | Ultimate Health Men"
-      description="Explore targeted men's health treatments including Semaglutide, Tirzepatide, TRT, PT-141, BPC-157, ALMA Duo, TriMix, IV hydration, and more."
-      canonical="https://ultimatehealthmen.com/treatments"
-    />
+      <SEO
+        title={`Men's Health Treatments | ${SITE_NAME}`}
+        description="Explore targeted men's health treatments including Semaglutide, Tirzepatide, TRT, PT-141, BPC-157, ALMA Duo, TriMix, IV hydration, and more."
+        canonical={`${SITE_URL}/treatments`}
+        structuredData={structuredData}
+      />
 
-    <main className="bg-[#f5f5f7] pt-24 text-[#1d1d1f]">
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-[var(--text-label)]">
-          Treatments
-        </p>
+      <main className="treatments-index-page">
+        <section className="treatments-index-hero">
+          <p className="treatments-index-eyebrow">Treatments</p>
 
-        <h1 className="max-w-5xl text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
-          Targeted treatments for men who want to feel better, perform better,
-          and stay ahead of their health.
-        </h1>
+          <h1>
+  Targeted treatments for men who want to feel better, perform better, and stay
+  ahead of their health.
+</h1>
 
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--text-muted)] sm:text-xl">
-          Explore treatment options across weight management, hormone
-          optimization, sexual wellness, peptide therapy, IV hydration, and
-          direct primary care.
-        </p>
-      </section>
+          <p>
+            Explore treatment options across weight management, hormone
+            optimization, sexual wellness, peptide therapy, IV hydration, and
+            direct primary care.
+          </p>
+        </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24">
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {treatments.map((treatment) => (
-            <Link
-              key={treatment.slug}
-              to={`/treatment/${treatment.slug}`}
-              className="group flex min-h-[280px] flex-col justify-between rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div>
-                <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[var(--text-label)]">
-                  {treatment.category}
-                </p>
-
-                <h2 className="text-2xl font-semibold tracking-tight">
-                  {treatment.title}
-                </h2>
-
-                <p className="mt-4 leading-7 text-[var(--text-muted)]">
-                  {treatment.intro}
-                </p>
-
-                {treatment.price && (
-                  <p className="mt-5 inline-flex rounded-full bg-[#f5f5f7] px-4 py-2 text-sm font-semibold text-[#1d1d1f]">
-                    {treatment.price}
+        <section className="treatments-index-grid-section">
+          <div className="treatments-index-grid">
+            {treatments.map((treatment, index) => (
+              <Link
+                key={treatment.slug}
+                to={`/treatment/${treatment.slug}`}
+                className={`treatment-index-card treatment-card-variant-${index % 3}`}
+              >
+                <div>
+                  <p className="treatment-index-category">
+                    {treatment.category}
                   </p>
-                )}
-              </div>
 
-              <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#1d1d1f]">
-                Learn More
-                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-    </main>
+                  <h2>{treatment.title}</h2>
+
+                  <p className="treatment-index-intro">{treatment.intro}</p>
+
+                  {treatment.price && (
+                    <p className="treatment-index-price">{treatment.price}</p>
+                  )}
+                </div>
+
+                <div className="treatment-index-link">
+                  Learn More
+                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </main>
     </>
   );
 }

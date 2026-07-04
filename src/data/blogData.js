@@ -4,15 +4,12 @@ export const blogPosts = [
     title: "The 4 Components of Lipotropic B Injections for Weight Loss in Men",
     excerpt:
       "Lipotropic B injections may support fat metabolism, energy, liver health, and weight loss efforts.",
+    intro:
+      "Losing weight can be a challenge, especially as we get older. Sometimes, no matter how much you exercise or eat right, those extra pounds just won’t budge. That’s where Lipotropic B injections can help. These powerful injections give your body the boost it needs to burn fat more efficiently.",
     category: "Weight Management",
     date: "2026-07-03",
     readTime: "4 min read",
     content: [
-      {
-        heading: "The 4 Components of Lipotropic B Injections for Weight Loss in Men",
-        body:
-          "Losing weight can be a challenge, especially as we get older. Sometimes, no matter how much you exercise or eat right, those extra pounds just won’t budge. That’s where Lipotropic B injections can help. These powerful injections give your body the boost it needs to burn fat more efficiently.",
-      },
       {
         heading: "1. Methionine – The Fat-Breaker",
         body:
@@ -45,15 +42,12 @@ export const blogPosts = [
     title: "The Dangers of Untreated BPH: Why You Shouldn’t Ignore Your Prostate",
     excerpt:
       "BPH is common in men over 40, but ignoring symptoms can lead to serious urinary and kidney complications.",
+    intro:
+      "If you're a guy over 40, chances are you've heard about BPH. Benign Prostatic Hyperplasia is a fancy term for an enlarged prostate. It’s common, but that doesn’t mean you should ignore it.",
     category: "Men’s Health",
     date: "2026-07-03",
     readTime: "5 min read",
     content: [
-      {
-        heading: "The Dangers of Untreated BPH",
-        body:
-          "If you're a guy over 40, chances are you've heard about BPH. Benign Prostatic Hyperplasia is a fancy term for an enlarged prostate. It’s common, but that doesn’t mean you should ignore it.",
-      },
       {
         heading: "Bladder Damage",
         body:
@@ -86,15 +80,12 @@ export const blogPosts = [
     title: "The Top 5 Warning Signs of Prostate Problems",
     excerpt:
       "Learn the common warning signs that may indicate a prostate issue and why early evaluation matters.",
+    intro:
+      "The prostate may be small, but it plays a big role in men’s health. Prostate issues can sneak up on you, so knowing the warning signs is important.",
     category: "Men’s Health",
     date: "2026-07-03",
     readTime: "4 min read",
     content: [
-      {
-        heading: "The Top 5 Warning Signs of Prostate Problems",
-        body:
-          "The prostate may be small, but it plays a big role in men’s health. Prostate issues can sneak up on you, so knowing the warning signs is important.",
-      },
       {
         heading: "1. Trouble Peeing",
         body:
@@ -127,15 +118,12 @@ export const blogPosts = [
     title: "Men and Heart Disease: What You Need to Know",
     excerpt:
       "Heart disease is a major health risk for men, but prevention and regular checkups can make a difference.",
+    intro:
+      "Heart disease is one of the most serious health risks men face. The good news is that many risk factors can be addressed with prevention, lifestyle changes, and regular checkups.",
     category: "Preventive Care",
     date: "2026-07-03",
     readTime: "5 min read",
     content: [
-      {
-        heading: "Men and Heart Disease: What You Need to Know",
-        body:
-          "Heart disease is one of the most serious health risks men face. The good news is that many risk factors can be addressed with prevention, lifestyle changes, and regular checkups.",
-      },
       {
         heading: "What Is Heart Disease?",
         body:
@@ -163,15 +151,12 @@ export const blogPosts = [
     title: "Why Men Avoid the Doctor and How to Change That",
     excerpt:
       "Many men delay care until something feels serious. Here’s why that happens and how to break the cycle.",
+    intro:
+      "Many men avoid going to the doctor because they feel fine, are busy, fear bad news, or believe they can tough it out. But waiting too long can turn small issues into bigger problems.",
     category: "Preventive Care",
     date: "2026-07-03",
     readTime: "5 min read",
     content: [
-      {
-        heading: "Why Men Avoid the Doctor",
-        body:
-          "Many men avoid going to the doctor because they feel fine, are busy, fear bad news, or believe they can tough it out. But waiting too long can turn small issues into bigger problems.",
-      },
       {
         heading: "The 'If It Ain’t Broke' Mentality",
         body:
@@ -199,15 +184,12 @@ export const blogPosts = [
     title: "Three Reasons to Try PRP Injections for Hair Restoration",
     excerpt:
       "PRP uses your body’s own healing factors to support hair growth and improve thinning hair.",
+    intro:
+      "Hair thinning and bald spots are common, but there are treatment options that may help. PRP injections use platelet-rich plasma to support hair follicles and encourage growth.",
     category: "Hair Restoration",
     date: "2026-07-03",
     readTime: "4 min read",
     content: [
-      {
-        heading: "Three Reasons to Try PRP Injections for Hair Restoration",
-        body:
-          "Hair thinning and bald spots are common, but there are treatment options that may help. PRP injections use platelet-rich plasma to support hair follicles and encourage growth.",
-      },
       {
         heading: "1. It’s Natural and Safe",
         body:

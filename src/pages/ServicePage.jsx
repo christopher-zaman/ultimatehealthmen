@@ -1,80 +1,93 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, CheckCircle } from "lucide-react";
 import { services } from "../data/servicesData";
 import SEO from "../components/seo/SEO";
+import { SITE_URL, SITE_NAME } from "../config/site";
+
+import ServiceHero from "../components/service/ServiceHero";
+import ServiceSplitSection from "../components/service/ServiceSplitSection";
+import ServiceListSection from "../components/service/ServiceListSection";
+import ServiceBenefits from "../components/service/ServiceBenefits";
+import ServiceProcess from "../components/service/ServiceProcess";
+import ServiceFAQ from "../components/service/ServiceFAQ";
+import ServiceCTA from "../components/service/ServiceCTA";
 
 export default function ServicePage() {
   const { slug } = useParams();
   const service = services.find((item) => item.slug === slug);
 
+  const structuredData = service
+    ? {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        name: SITE_NAME,
+        medicalSpecialty:
+          service.slug === "direct-primary-care" ? "PrimaryCare" : "Physician",
+        url: `${SITE_URL}/service/${service.slug}`,
+        serviceType: service.title,
+      }
+    : null;
+
   if (!service) {
-  return (
+    return (
       <>
         <SEO
-          title="Service Not Found | Ultimate Health Men"
+          title={`Service Not Found | ${SITE_NAME}`}
           description="The requested service could not be found."
-          canonical="https://ultimatehealthmen.com/services"
+          canonical={`${SITE_URL}/services`}
         />
 
-      <main className="service-page">
-        <section className="service-hero">
-          <p className="eyebrow">Service not found</p>
-          <h1>This service page does not exist.</h1>
-          <Link to="/" className="primary-btn">
-            Back to Home
-          </Link>
-        </section>
-      </main>
+        <main className="service-page">
+          <section className="service-hero">
+            <p className="service-eyebrow">Service not found</p>
+            <h1>This service page does not exist.</h1>
+            <Link to="/" className="service-primary-btn">
+              Back to Home
+            </Link>
+          </section>
+        </main>
       </>
     );
   }
+
   return (
     <>
-    <SEO
-      title={`${service.title} | Ultimate Health Men`}
-      description={service.intro}
-      canonical={`https://ultimatehealthmen.com/service/${service.slug}`}
-    />
-    <main className="service-page">
-      <section className="service-hero">
-        <Link to="/services" className="back-link">
-          <ArrowLeft size={18} />
-          Back to Services
-        </Link>
+      <SEO
+        title={`${service.title} | ${SITE_NAME}`}
+        description={service.intro}
+        canonical={`${SITE_URL}/service/${service.slug}`}
+        structuredData={structuredData}
+      />
 
-        <p className="eyebrow">{service.eyebrow}</p>
-        <h1>{service.title}</h1>
-        <p className="service-intro">{service.intro}</p>
+      <main className="service-page">
+        <ServiceHero service={service} />
 
-        <Link to="/contact" className="primary-btn">
-          {service.cta}
-        </Link>
-      </section>
+        <ServiceSplitSection
+          eyebrow="The problem"
+          title="Men’s healthcare should feel easier to start."
+          body={service.problem}
+        />
 
-      <section className="service-content">
-        {service.sections.map((section) => (
-          <article className="service-card" key={section.heading}>
-            <CheckCircle className="service-icon" size={24} />
-            <div>
-              <h2>{section.heading}</h2>
-              <p>{section.body}</p>
-            </div>
-          </article>
-        ))}
-      </section>
+        <ServiceListSection
+          eyebrow="When to consider this"
+          title="This service may be right for you if..."
+          items={service.symptoms}
+        />
 
-      <section className="service-bottom-cta">
-        <h2>Ready to take the next step?</h2>
-        <p>
-          Ultimate Health Men is built for men who want direct, focused,
-          confidential care.
-        </p>
-        
-        <Link to="/contact" className="primary-btn">
-          Contact Us
-        </Link>
-      </section>
-    </main>
+        <ServiceBenefits benefits={service.benefits} />
+
+        <ServiceProcess expectations={service.expectations} />
+
+        <ServiceSplitSection
+          eyebrow={`Why ${SITE_NAME}`}
+          title="Direct, private care built around men’s health."
+          body={service.whyUHM}
+          dark
+        />
+
+        <ServiceFAQ service={service} />
+
+        <ServiceCTA />
+      </main>
     </>
   );
 }

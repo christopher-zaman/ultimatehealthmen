@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, HeartPulse, ShieldCheck, Stethoscope } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  HeartPulse,
+  ShieldCheck,
+  Stethoscope,
+} from "lucide-react";
 import { services } from "../data/servicesData";
 import { siteInfo } from "../data/siteInfo";
 import SEO from "../components/seo/SEO";
+import { SITE_URL, SITE_NAME } from "../config/site";
 
 const benefits = [
   {
@@ -30,15 +37,31 @@ const steps = [
 ];
 
 function ServicesPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `Men's Health Services | ${SITE_NAME}`,
+    url: `${SITE_URL}/services`,
+    description:
+      "Explore men's health services in Winter Haven, including Direct Primary Care, hormone optimization, weight management, sexual wellness, ED treatment, IV hydration, and peptide therapy.",
+    mainEntity: services.map((service) => ({
+      "@type": "MedicalBusiness",
+      name: SITE_NAME,
+      medicalSpecialty:
+        service.slug === "direct-primary-care" ? "PrimaryCare" : "Physician",
+      url: `${SITE_URL}/service/${service.slug}`,
+      serviceType: service.title,
+    })),
+  };
+
   return (
-
     <>
-    <SEO
-      title="Men's Health Services | Ultimate Health Men"
-      description="Explore men's health services in Winter Haven, including Direct Primary Care, hormone optimization, weight management, sexual wellness, ED treatment, IV hydration, and peptide therapy."
-      canonical="https://ultimatehealthmen.com/services"
-    />
-
+      <SEO
+        title={`Men's Health Services | ${SITE_NAME}`}
+        description="Explore men's health services in Winter Haven, including Direct Primary Care, hormone optimization, weight management, sexual wellness, ED treatment, IV hydration, and peptide therapy."
+        canonical={`${SITE_URL}/services`}
+        structuredData={structuredData}
+      />
     <main className="bg-[#f5f5f7] pt-24 text-[#1d1d1f]">
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-6 py-20">
@@ -52,9 +75,9 @@ function ServicesPage() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--text-muted)] sm:text-xl">
-            Ultimate Health Men offers direct, personalized care for men who want
-            better access, clearer answers, and a provider who takes the time to
-            understand the full picture.
+            {SITE_NAME} offers direct, personalized care for men who want better
+            access, clearer answers, and a provider who takes the time to understand
+            the full picture.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">

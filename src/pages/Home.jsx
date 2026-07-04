@@ -11,33 +11,34 @@ import FinalCTA from "../components/sections/FinalCTA";
 import AnimatedSection from "../components/ui/AnimatedSection";
 import SEO from "../components/seo/SEO";
 import { siteInfo } from "../data/siteInfo";
+import { SITE_URL, SITE_NAME } from "../config/site";
 
 function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    name: SITE_NAME,
+    url: SITE_URL,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteInfo.address.street,
+      addressLocality: siteInfo.address.city,
+      addressRegion: siteInfo.address.state,
+      postalCode: siteInfo.address.zip,
+      addressCountry: siteInfo.address.country,
+    },
+    areaServed: ["Winter Haven", "Central Florida"],
+    openingHours: "By appointment",
+    medicalSpecialty: ["Primary Care", "Men's Health"],
+  };
+
   return (
     <>
       <SEO
         title="Ultimate Health Men | Men's Health Clinic in Winter Haven"
         description="Private men's healthcare in Winter Haven specializing in Direct Primary Care, hormone optimization, weight management, erectile dysfunction treatment, peptide therapy, and preventive care."
-        canonical="https://ultimatehealthmen.com"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "MedicalClinic",
-          name: "Ultimate Health Men",
-          image: "https://ultimatehealthmen.vercel.app/amanda-banner.webp",
-          telephone: "+1-352-901-6582",
-          url: "https://ultimatehealthmen.com",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: siteInfo.address.street,
-            addressLocality: siteInfo.address.city,
-            addressRegion: siteInfo.address.state,
-            postalCode: siteInfo.address.zip,
-            addressCountry: siteInfo.address.country,
-          },
-          areaServed: ["Winter Haven", "Central Florida"],
-          openingHours: "By appointment",
-          medicalSpecialty: ["Primary Care", "Men's Health"],
-        }}
+        canonical={SITE_URL}
+        structuredData={structuredData}
       />
 
       <AnimatedSection>

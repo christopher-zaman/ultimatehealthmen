@@ -18,7 +18,9 @@ function Hero() {
           </p>
 
           <h1 className="mt-6 max-w-4xl text-5xl font-bold tracking-[-0.07em] text-[#1d1d1f] sm:text-6xl lg:text-8xl">
-            Feel like yourself again.
+            Feel like{" "}
+            <span className="hero-metal">yourself</span>{" "}
+            again.
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-[#667085] sm:text-xl sm:leading-9">

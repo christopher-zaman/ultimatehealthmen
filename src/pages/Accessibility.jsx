@@ -1,16 +1,31 @@
-import { Mail, MapPin, Phone, Accessibility as AccessibilityIcon } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Accessibility as AccessibilityIcon,
+} from "lucide-react";
 import { siteInfo } from "../data/siteInfo";
 import SEO from "../components/seo/SEO";
+import { SITE_URL, SITE_NAME } from "../config/site";
 
 function Accessibility() {
-  return (
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Accessibility Statement | ${SITE_NAME}`,
+    url: `${SITE_URL}/accessibility`,
+    description:
+      "Ultimate Health Men is committed to providing an accessible website experience for all visitors, including individuals with disabilities.",
+  };
 
+  return (
     <>
-    <SEO
-      title="Accessibility Statement | Ultimate Health Men"
-      description="Ultimate Health Men is committed to providing an accessible website experience for all visitors, including individuals with disabilities."
-      canonical="https://ultimatehealthmen.com/accessibility"
-    />
+      <SEO
+        title={`Accessibility Statement | ${SITE_NAME}`}
+        description="Ultimate Health Men is committed to providing an accessible website experience for all visitors, including individuals with disabilities."
+        canonical={`${SITE_URL}/accessibility`}
+        structuredData={structuredData}
+      />
 
     <main className="bg-[#f5f5f7] pt-24 text-[#1d1d1f]">
       <section className="mx-auto max-w-5xl px-6 py-20">

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logos/ultimate-health-men-logo.svg";
 import { siteInfo } from "../../data/siteInfo";
+import SocialLinks from "../ui/SocialLinks";
 
 function Footer() {
   return (
@@ -45,6 +46,7 @@ function Footer() {
             </a>
             <span>Winter Haven, FL</span>
             <span>By appointment</span>
+            <SocialLinks title="Follow Ultimate Health Men" />
           </div>
         </div>
       </div>
