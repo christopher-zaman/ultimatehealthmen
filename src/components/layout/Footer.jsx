@@ -7,18 +7,27 @@ function Footer() {
   return (
     <footer className="bg-[#0b1f33] px-6 py-12 text-white">
       <div className="mx-auto grid max-w-7xl gap-10 border-t border-white/10 pt-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
-        <div>
-          <img
-            src={logo}
-            alt="Ultimate Health Men"
-            className="h-16 w-auto rounded-xl bg-white p-2"
-          />
+        <Link
+  to="/"
+  className="inline-flex items-center gap-4 transition hover:opacity-80"
+>
+  <img
+    src={logo}
+    alt="Ultimate Health Men"
+    className="h-16 w-auto shrink-0 rounded-xl bg-white p-2"
+  />
 
-          <p className="mt-6 max-w-sm leading-7 text-white/55">
-            Personalized men&apos;s healthcare powered by Ultimate Health Direct
-            Primary Care.
-          </p>
-        </div>
+  <div className="leading-none">
+    <p className="text-xl font-semibold tracking-tight text-white">
+      Ultimate Health Men
+    </p>
+
+    <p className="mt-1 text-xs font-medium uppercase tracking-[0.22em] text-white/60">
+      Direct Primary Care
+    </p>
+  </div>
+</Link>
+        
 
         <div>
           <p className="font-semibold">Explore</p>
@@ -46,6 +55,18 @@ function Footer() {
             </a>
             <span>Winter Haven, FL</span>
             <span>By appointment</span>
+
+            <p className="mt-6 text-xs font-bold uppercase tracking-[0.22em] text-white/45">
+              Hours
+            </p>
+
+            <ul className="mt-3 space-y-2 text-white/65">
+              <li>Monday – Friday: 8:00 AM – 5:00 PM</li>
+              <li>Saturday: Closed</li>
+              <li>Sunday: Closed</li>
+            </ul>
+
+
             <SocialLinks title="Follow Ultimate Health Men" />
           </div>
         </div>

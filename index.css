@@ -891,51 +891,9 @@ a {
         Treatments Index Page
 ===========================*/
 
-.treatments-index-page {
-  background: #f5f5f7;
-  color: #1d1d1f;
-  padding-top: 96px;
-  overflow-x: hidden;
-}
-
-.treatments-index-hero,
 .treatments-index-grid-section {
   width: min(100% - 64px, 1280px);
   margin-inline: auto;
-}
-
-.treatments-index-hero {
-  padding: 88px 0 64px;
-}
-
-.treatments-index-eyebrow,
-.treatment-index-category {
-  color: #667085;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.treatments-index-hero h1 {
-  max-width: 1100px;
-  margin-top: 18px;
-  font-size: clamp(4rem, 7vw, 7.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.075em;
-  font-weight: 750;
-  color: #1d1d1f;
-}
-
-.treatments-index-hero > p {
-  max-width: 780px;
-  margin-top: 32px;
-  color: #667085;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-  line-height: 1.75;
-}
-
-.treatments-index-grid-section {
   padding-bottom: 112px;
 }
 
@@ -959,14 +917,17 @@ a {
   color: #1d1d1f;
   border: 1px solid rgba(18, 53, 91, 0.12);
   background:
-  radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.95), transparent 28%),
-  radial-gradient(circle at 92% 8%, rgba(173, 202, 83, 0.15), transparent 22%),
-  linear-gradient(135deg, #ffffff 0%, #f2f5f8 46%, #dfe6ee 100%);
+  linear-gradient(135deg, #ffffff 0%, #f4f7fa 48%, #e8eef5 100%);
   box-shadow: 0 14px 44px rgba(15, 23, 42, 0.07);
   transition:
     transform 0.24s ease,
     box-shadow 0.24s ease,
     border-color 0.24s ease;
+}
+
+.treatment-index-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .treatment-card-variant-0::before,
@@ -979,78 +940,78 @@ a {
   position: absolute;
   pointer-events: none;
   z-index: 1;
+  opacity: 0.34;
 }
 
-/* Variant 0: soft orbital circles */
+/* Variant 0: large edge circle + small navy ring */
 .treatment-card-variant-0::before {
-  right: -54px;
-  top: -54px;
-  width: 220px;
-  height: 220px;
+  right: -72px;
+  top: -72px;
+  width: 210px;
+  height: 210px;
   border-radius: 999px;
-  border: 2px solid rgba(18, 53, 91, 0.12);
-  box-shadow:
-    inset 0 0 0 24px rgba(18, 53, 91, 0.025),
-    0 0 0 42px rgba(173, 202, 83, 0.035);
+  border: 2px solid rgba(18, 53, 91, 0.24);
 }
 
 .treatment-card-variant-0::after {
-  right: 28px;
-  bottom: 30px;
-  width: 88px;
-  height: 88px;
+  right: 38px;
+  bottom: 36px;
+  width: 74px;
+  height: 74px;
   border-radius: 999px;
-  border: 2px solid rgba(173, 202, 83, 0.28);
+  border: 2px solid rgba(18, 53, 91, 0.16);
 }
 
-/* Variant 1: diamond / shield outlines */
+/* Variant 1: half star on upper-right edge + subtle square */
 .treatment-card-variant-1::before {
-  right: -44px;
-  top: 26px;
+  right: -70px;
+  top: -42px;
   width: 190px;
   height: 190px;
-  border: 2px solid rgba(18, 53, 91, 0.13);
-  border-radius: 42px;
-  transform: rotate(45deg);
-  box-shadow: 0 0 0 28px rgba(18, 53, 91, 0.025);
+  background: rgba(18, 53, 91, 0.18);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 92%,
+    50% 70%,
+    21% 92%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 }
 
 .treatment-card-variant-1::after {
-  left: 26px;
-  bottom: 34px;
-  width: 110px;
-  height: 110px;
-  border: 2px solid rgba(173, 202, 83, 0.22);
-  border-radius: 30px;
-  transform: rotate(-18deg);
+  left: 32px;
+  bottom: 38px;
+  width: 78px;
+  height: 78px;
+  border-radius: 22px;
+  border: 2px solid rgba(18, 53, 91, 0.14);
+  transform: rotate(18deg);
 }
 
-/* Variant 2: sparkle shape + ring */
+/* Variant 2: triangle edge mark + lower circle */
 .treatment-card-variant-2::before {
-  right: 34px;
-  top: 26px;
-  width: 118px;
-  height: 118px;
-  opacity: 0.55;
-  background:
-    linear-gradient(rgba(18, 53, 91, 0.16), rgba(18, 53, 91, 0.16)) center / 2px 100% no-repeat,
-    linear-gradient(90deg, rgba(18, 53, 91, 0.16), rgba(18, 53, 91, 0.16)) center / 100% 2px no-repeat;
-  transform: rotate(45deg);
+  right: -42px;
+  top: 34px;
+  width: 150px;
+  height: 150px;
+  background: rgba(18, 53, 91, 0.15);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(18deg);
 }
 
 .treatment-card-variant-2::after {
-  right: -50px;
-  bottom: -50px;
-  width: 190px;
-  height: 190px;
+  right: 36px;
+  bottom: -44px;
+  width: 150px;
+  height: 150px;
   border-radius: 999px;
-  border: 2px solid rgba(173, 202, 83, 0.22);
-  box-shadow: inset 0 0 0 28px rgba(18, 53, 91, 0.03);
+  border: 2px solid rgba(18, 53, 91, 0.15);
 }
-
-
-
-
 .treatment-index-card:hover {
   transform: translateY(-8px);
   border-color: rgba(18, 53, 91, 0.24);
@@ -1104,13 +1065,8 @@ a {
 }
 
 @media (max-width: 700px) {
-  .treatments-index-hero,
   .treatments-index-grid-section {
     width: min(100% - 32px, 1280px);
-  }
-
-  .treatments-index-hero {
-    padding: 56px 0 48px;
   }
 
   .treatments-index-grid {
@@ -1121,10 +1077,6 @@ a {
     min-height: 300px;
     padding: 28px;
   }
-}
-.treatment-index-card > * {
-  position: relative;
-  z-index: 2;
 }
 /*========================
         Blog Article Pages
