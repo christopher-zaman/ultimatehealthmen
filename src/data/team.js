@@ -1,9 +1,11 @@
+import amandaCover from "../assets/images/amanda-gaskin-cover.webp";
+
 const team = [
     {
     id: 1,
     name: "Amanda Gaskin, APRN",
     title: "Founder & Primary Care Provider",
-    image: null,
+    image: amandaCover,
     bio: `Amanda Gaskin founded Ultimate Health Men with a mission to provide personalized, relationship-based healthcare that helps men live healthier, stronger lives. Through Direct Primary Care and evidence-based medicine, she focuses on prevention, optimization, and treating the whole person—not just symptoms.`,
     },
   {

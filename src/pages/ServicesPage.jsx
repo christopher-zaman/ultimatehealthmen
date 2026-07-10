@@ -63,7 +63,7 @@ function ServicesPage() {
         structuredData={structuredData}
       />
 
-      <main className="bg-[#f5f5f7] pt-24 text-[#1d1d1f]">
+      <main className="bg-[#f5f5f7] text-[#1d1d1f]">
         <section className="relative isolate overflow-hidden px-6 py-20">
           <div className="pointer-events-none absolute -right-36 top-16 h-96 w-96 rounded-full border border-[rgba(18,53,91,0.08)]" />
           <div className="pointer-events-none absolute left-[48%] bottom-10 h-28 w-28 rotate-12 rounded-[1.75rem] border border-[rgba(18,53,91,0.07)]" />

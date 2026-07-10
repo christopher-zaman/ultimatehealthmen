@@ -7,41 +7,51 @@ function FounderNote() {
         </p>
 
         <h2 className="mt-6 text-4xl font-semibold tracking-[-0.04em] text-[#1d1d1f] md:text-5xl">
-          Real men deserve real care.
+          You do not have to keep pushing through alone.
         </h2>
 
         <div className="mt-8 space-y-6 text-lg leading-8 text-[var(--text-body)]">
           <p>Hi there,</p>
 
           <p>
-            I’m so glad you found your way here. I started Ultimate Health Men
-            because I saw too many good men silently struggling with their
-            health — feeling tired, stressed, not quite like themselves, and
-            unsure where to turn.
+            I’m so glad you found your way here. I know many men spend years
+            putting their health last. You take care of your family, your work,
+            and everyone who depends on you, while quietly adjusting to low
+            energy, stress, weight changes, or personal concerns that can be
+            difficult to discuss.
           </p>
 
           <p>
-            The truth is, men’s health matters. Your well-being matters. And
-            you deserve a space where you can talk openly and get real
-            solutions that work.
+            But feeling unlike yourself should not become your new normal. Your
+            health matters. Your confidence matters. And you deserve a place
+            where you can speak honestly, feel respected, and receive thoughtful
+            solutions built around your needs.
           </p>
 
           <p>
-            At our clinic, we don’t just treat symptoms — we listen, we care,
-            and we walk with you every step of the way.
+            At Ultimate Health Men, we do more than treat symptoms. We listen,
+            look at the full picture, and work with you to create a plan that
+            supports your health today and protects your future.
           </p>
 
           <p>
-            Welcome to Ultimate Health Men — where your health, confidence, and
-            future matter.
+            Whether you are ready to address a specific concern or simply want
+            to feel stronger, healthier, and more like yourself again, our team
+            is here to walk with you.
+          </p>
+
+          <p className="font-medium text-[#111827]">
+            Welcome to Ultimate Health Men—where your health, your confidence,
+            and your future matter.
           </p>
 
           <div className="pt-4">
             <p className="font-semibold text-[#111827]">
               Amanda Vontrice Gaskin, APRN
             </p>
+
             <p className="text-[var(--text-label)]">
-              Founder, Ultimate Health Men
+              Founder & Medical Director, Ultimate Health Men
             </p>
           </div>
         </div>
@@ -50,4 +60,4 @@ function FounderNote() {
   );
 }
 
-export default FounderNote; 
+export default FounderNote;

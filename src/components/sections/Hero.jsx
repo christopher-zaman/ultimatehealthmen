@@ -8,10 +8,11 @@ import { siteInfo } from "../../data/siteInfo";
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#f7f7f9] to-[#f5f5f7] px-6 py-16 sm:py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#f7f7f9] to-[#f5f5f7] px-6 pb-16 pt-10 sm:py-20 lg:py-32">
       <div className="radial-glow glow-green -right-24 top-20 h-80 w-80" />
-      <div className="radial-glow glow-navy right-40 bottom-10 h-96 w-96" />
-      <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[0.85fr_1.15fr] relative overflow-hidden">
+      <div className="radial-glow glow-navy bottom-10 right-40 h-96 w-96" />
+
+      <div className="relative mx-auto grid max-w-7xl items-center gap-16 overflow-hidden lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[color:var(--brand-navy)]/80">
             Better health. Stronger you. Better life.

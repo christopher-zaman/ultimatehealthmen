@@ -7,13 +7,13 @@ function AboutHero() {
         </p>
 
         <h1 className="mt-6 text-5xl font-semibold tracking-[-0.05em] text-[#1d1d1f] md:text-7xl">
-          Redefining men’s healthcare in Winter Haven.
+          Men deserve healthcare that sees the whole person.
         </h1>
 
         <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-[var(--text-body)]">
-          Ultimate Health Men was created to give men a comfortable, discreet,
-          and proactive place to take control of their health, confidence, and
-          long-term wellness.
+          Ultimate Health Men was created from personal experience, professional
+          purpose, and a belief that men should not have to wait until something
+          becomes serious to feel heard.
         </p>
       </div>
     </section>

@@ -63,8 +63,8 @@ function Navbar() {
 
   return (
     <>
-      <header className="fixed left-0 top-0 z-[9999] w-full border-b border-black/10 bg-[#f5f5f7] shadow-sm">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+      <header className="sticky left-0 top-0 z-[9999] w-full border-b border-black/10 bg-[#f5f5f7] shadow-sm">
+        <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
           <Link
             to="/"
             onClick={closeMobile}
