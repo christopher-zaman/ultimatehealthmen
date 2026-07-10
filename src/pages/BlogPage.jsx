@@ -41,7 +41,7 @@ function BlogPage() {
           Men’s health insights for better energy, confidence, and prevention.
         </h1>
 
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--text-muted)] sm:text-xl">
+        <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--brand-navy-light)] sm:text-xl">
           Helpful articles from Ultimate Health Men covering weight management,
           prostate health, heart health, preventive care, and confidence.
         </p>
@@ -64,7 +64,7 @@ function BlogPage() {
                   {post.title}
                 </h2>
 
-                <p className="mt-4 leading-7 text-[var(--text-muted)]">
+                <p className="mt-4 leading-7 text-[var(--brand-navy)]">
                   {post.excerpt}
                 </p>
 

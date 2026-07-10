@@ -35,6 +35,7 @@ body {
   --text-label: #667085;
   --text-muted: #98A2B3;
   --brand-navy: #12355B;
+  --brand-navy-light: #4B6382;
 }
 
 html {
@@ -270,7 +271,7 @@ a {
   margin-top: 28px;
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   line-height: 1.75;
-  color: #667085;
+  color: var(--brand-navy);
 }
 
 .service-primary-btn,
@@ -400,7 +401,7 @@ a {
 
 .service-card p {
   margin-top: 14px;
-  color: #667085;
+  color: var(--brand-navy);
   line-height: 1.8;
 }
 
@@ -1165,7 +1166,7 @@ a {
 
 .blog-intro-text {
   max-width: 760px;
-  color: #44546a;
+  color: var(--brand-navy);
   font-size: 1.15rem;
   line-height: 1.9;
 }

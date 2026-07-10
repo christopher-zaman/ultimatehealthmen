@@ -13,7 +13,7 @@ function Hero() {
       <div className="radial-glow glow-navy right-40 bottom-10 h-96 w-96" />
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[0.85fr_1.15fr] relative overflow-hidden">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#667085]">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[color:var(--brand-navy)]/80">
             Better health. Stronger you. Better life.
           </p>
 
@@ -23,7 +23,7 @@ function Hero() {
             again.
           </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-[#667085] sm:text-xl sm:leading-9">
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-[color:var(--brand-navy)] sm:text-xl sm:leading-9">
             Personalized men's healthcare focused on hormone optimization, sexual wellness, weight management, longevity, and preventive care.
           </p>
 

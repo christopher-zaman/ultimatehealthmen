@@ -64,61 +64,78 @@ function ServicesPage() {
       />
 
       <main className="bg-[#f5f5f7] pt-24 text-[#1d1d1f]">
-        <section className="mx-auto max-w-7xl px-6 py-20">
-          <div className="max-w-4xl">
-            <p className="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-[var(--text-label)]">
-              Our Services
-            </p>
+        <section className="relative isolate overflow-hidden px-6 py-20">
+          <div className="pointer-events-none absolute -right-36 top-16 h-96 w-96 rounded-full border border-[rgba(18,53,91,0.08)]" />
+          <div className="pointer-events-none absolute left-[48%] bottom-10 h-28 w-28 rotate-12 rounded-[1.75rem] border border-[rgba(18,53,91,0.07)]" />
 
-            <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
-              Men’s healthcare designed around you.
-            </h1>
+          <div className="relative z-10 mx-auto max-w-7xl">
+            <div className="max-w-4xl">
+              <p className="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--brand-navy-light)]">
+                Our Services
+              </p>
 
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--text-muted)] sm:text-xl">
-              {SITE_NAME} offers direct, personalized care for men who want
-              better access, clearer answers, and a provider who takes the time
-              to understand the full picture.
-            </p>
+              <h1 className="text-5xl font-semibold tracking-tight text-[#1d1d1f] sm:text-6xl lg:text-7xl">
+                Men’s healthcare designed around you.
+              </h1>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
-                href={siteInfo.bookingUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-[#1d1d1f] px-7 py-3 text-sm font-semibold text-white transition hover:bg-black"
-              >
-                Book Consultation
-              </a>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-[color:var(--brand-navy)] sm:text-xl">
+                {SITE_NAME} offers direct, personalized care for men who want
+                better access, clearer answers, and a provider who takes the
+                time to understand the full picture.
+              </p>
 
-              <a
-                href="#services-list"
-                className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white px-7 py-3 text-sm font-semibold text-[#1d1d1f] transition hover:bg-[#fafafa]"
-              >
-                Explore Services
-              </a>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href={siteInfo.bookingUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-[#1d1d1f] px-7 py-3 text-sm font-semibold text-white transition hover:bg-black"
+                >
+                  Book Consultation
+                </a>
+
+                <a
+                  href="#services-list"
+                  className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white px-7 py-3 text-sm font-semibold text-[#1d1d1f] transition hover:bg-[#fafafa]"
+                >
+                  Explore Services
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-6 pb-20">
           <div className="grid gap-5 md:grid-cols-3">
-            {benefits.map((benefit) => {
+            {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
 
               return (
                 <div
                   key={benefit.title}
-                  className="rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm"
+                  className="relative isolate overflow-hidden rounded-[2rem] border border-[rgba(18,53,91,0.10)] bg-white p-8 shadow-sm"
                 >
-                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f5f7]">
-                    <Icon className="h-6 w-6 text-[#1d1d1f]" />
+                  <div className="pointer-events-none absolute -right-12 -top-12 z-0 h-32 w-32 rounded-full border border-[rgba(18,53,91,0.10)]" />
+
+                  {index === 1 && (
+                    <div className="pointer-events-none absolute bottom-6 right-8 z-0 h-16 w-16 rotate-12 rounded-2xl border border-[rgba(18,53,91,0.08)]" />
+                  )}
+
+                  {index === 2 && (
+                    <div className="pointer-events-none absolute -bottom-8 right-8 z-0 h-24 w-24 rotate-12 bg-[rgba(173,202,83,0.08)] [clip-path:polygon(50%_0%,0%_100%,100%_100%)]" />
+                  )}
+
+                  <div className="relative z-10">
+                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f5f7]">
+                      <Icon className="h-6 w-6 text-[#12355b]" />
+                    </div>
+
+                    <h2 className="text-xl font-semibold">{benefit.title}</h2>
+
+                    <p className="mt-3 leading-7 text-[color:var(--brand-navy)]">
+                      {benefit.text}
+                    </p>
                   </div>
-
-                  <h2 className="text-xl font-semibold">{benefit.title}</h2>
-
-                  <p className="mt-3 leading-7 text-[var(--text-muted)]">
-                    {benefit.text}
-                  </p>
                 </div>
               );
             })}
@@ -127,7 +144,7 @@ function ServicesPage() {
 
         <section id="services-list" className="mx-auto max-w-7xl px-6 pb-24">
           <div className="mb-10 max-w-3xl">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[var(--text-label)]">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--brand-navy-light)]">
               What We Offer
             </p>
 
@@ -135,7 +152,7 @@ function ServicesPage() {
               Care that supports the whole man.
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-[var(--text-muted)]">
+            <p className="mt-5 text-lg leading-8 text-[color:var(--brand-navy)]">
               From primary care to hormone optimization, sexual wellness, weight
               management, and recovery support, each service is designed to help
               men feel better, perform better, and stay ahead of their health.
@@ -143,14 +160,24 @@ function ServicesPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <Link
                 key={service.slug}
                 to={`/service/${service.slug}`}
-                className="group flex min-h-[280px] flex-col justify-between rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                className="group relative isolate flex min-h-[280px] flex-col justify-between overflow-hidden rounded-[2rem] border border-[rgba(18,53,91,0.10)] bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               >
-                <div>
-                  <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[var(--text-label)]">
+                <div className="pointer-events-none absolute -right-14 -top-14 z-0 h-36 w-36 rounded-full border border-[rgba(18,53,91,0.10)]" />
+
+                {index % 3 === 1 && (
+                  <div className="pointer-events-none absolute bottom-8 right-8 z-0 h-16 w-16 rotate-12 rounded-2xl border border-[rgba(18,53,91,0.08)]" />
+                )}
+
+                {index % 3 === 2 && (
+                  <div className="pointer-events-none absolute -bottom-8 right-8 z-0 h-24 w-24 rotate-12 bg-[rgba(173,202,83,0.08)] [clip-path:polygon(50%_0%,0%_100%,100%_100%)]" />
+                )}
+
+                <div className="relative z-10">
+                  <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--brand-navy-light)]">
                     {service.eyebrow}
                   </p>
 
@@ -158,12 +185,12 @@ function ServicesPage() {
                     {service.title}
                   </h3>
 
-                  <p className="mt-4 line-clamp-4 leading-7 text-[var(--text-muted)]">
+                  <p className="mt-4 line-clamp-4 leading-7 text-[color:var(--brand-navy)]">
                     {service.intro}
                   </p>
                 </div>
 
-                <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#1d1d1f]">
+                <div className="relative z-10 mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#12355b]">
                   Learn More
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </div>
@@ -176,7 +203,7 @@ function ServicesPage() {
           <div className="mx-auto max-w-7xl px-6 py-24">
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
-                <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[var(--text-label)]">
+                <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--brand-navy-light)]">
                   How It Works
                 </p>
 
@@ -184,7 +211,7 @@ function ServicesPage() {
                   A simpler path to better care.
                 </h2>
 
-                <p className="mt-5 text-lg leading-8 text-[var(--text-muted)]">
+                <p className="mt-5 text-lg leading-8 text-[color:var(--brand-navy)]">
                   The process is designed to be clear, direct, and focused on
                   helping you understand your options.
                 </p>
@@ -209,8 +236,11 @@ function ServicesPage() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-24">
-          <div className="rounded-[2.5rem] bg-[#1d1d1f] p-8 text-white sm:p-12 lg:p-16">
-            <div className="max-w-3xl">
+          <div className="relative isolate overflow-hidden rounded-[2.5rem] bg-[#1d1d1f] p-8 text-white sm:p-12 lg:p-16">
+            <div className="pointer-events-none absolute -right-28 -top-28 h-80 w-80 rounded-full border border-white/10" />
+            <div className="pointer-events-none absolute -bottom-32 right-20 h-80 w-80 rounded-full bg-white/[0.035]" />
+
+            <div className="relative z-10 max-w-3xl">
               <CheckCircle className="mb-6 h-10 w-10" />
 
               <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">

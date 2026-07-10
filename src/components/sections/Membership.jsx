@@ -48,8 +48,14 @@ const plans = [
 
 function Membership() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-28">
+    <section className="relative isolate overflow-hidden bg-white px-6 py-28">
       <div className="radial-glow glow-green right-0 top-20 h-96 w-96" />
+
+      {/* subtle geometric background */}
+      <div className="pointer-events-none absolute -right-36 top-28 h-96 w-96 rounded-full border border-[rgba(18,53,91,0.10)]" />
+      <div className="pointer-events-none absolute -left-36 bottom-24 h-80 w-80 rounded-full bg-[rgba(18,53,91,0.035)]" />
+      <div className="pointer-events-none absolute left-[48%] top-32 h-28 w-28 rotate-12 rounded-[1.75rem] border border-[rgba(18,53,91,0.09)]" />
+      <div className="pointer-events-none absolute bottom-20 right-[18%] h-32 w-32 rotate-12 bg-[rgba(173,202,83,0.075)] [clip-path:polygon(50%_0%,0%_100%,100%_100%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-14 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
@@ -60,7 +66,7 @@ function Membership() {
             className="max-w-3xl"
           />
 
-          <p className="max-w-2xl text-lg leading-8 text-[var(--text-body)] lg:ml-auto">
+          <p className="max-w-2xl text-lg leading-8 text-[color:var(--brand-navy)] lg:ml-auto">
             From essential primary care to complete optimization, Ultimate
             Health Men gives you more time, better access, and care designed
             around the whole man.
@@ -106,7 +112,7 @@ function Membership() {
                     className={`mt-5 min-h-[56px] text-lg font-medium leading-7 ${
                       plan.featured
                         ? "text-white/75"
-                        : "text-[var(--text-body)]"
+                        : "text-[color:var(--brand-navy)]"
                     }`}
                   >
                     {plan.subtitle}
@@ -120,7 +126,7 @@ function Membership() {
                       className={`pb-3 text-sm font-semibold uppercase tracking-[0.16em] ${
                         plan.featured
                           ? "text-white/55"
-                          : "text-[var(--text-label)]"
+                          : "text-[color:var(--brand-navy-light)]"
                       }`}
                     >
                       /month
@@ -141,7 +147,7 @@ function Membership() {
                         className={`flex items-start gap-3 ${
                           plan.featured
                             ? "text-white/75"
-                            : "text-[var(--text-body)]"
+                            : "text-[color:var(--brand-navy)]"
                         }`}
                       >
                         <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgba(151,201,61,.16)] text-[var(--uhm-green)]">

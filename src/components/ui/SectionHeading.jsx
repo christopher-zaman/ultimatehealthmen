@@ -2,7 +2,7 @@ function SectionHeading({ eyebrow, title, text, centered = false, className = ""
   return (
     <div className={`${centered ? "mx-auto text-center" : ""} max-w-3xl ${className}`}>
       {eyebrow && (
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#667085]">
+        <p className="text-2xl font-semibold uppercase tracking-[0.25em] text-[#667085]">
           {eyebrow}
         </p>
       )}
@@ -11,7 +11,7 @@ function SectionHeading({ eyebrow, title, text, centered = false, className = ""
         {title}
       </h2>
 
-      {text && <p className="mt-6 text-lg leading-8 text-[#667085]">{text}</p>}
+      {text && <p className="mt-6 leading-8 text-[color:var(--brand-navy)]">{text}</p>}
     </div>
   );
 }

@@ -3,7 +3,7 @@ export const blogPosts = [
   slug: "ultimate-health-men-launches-winter-haven",
   title: "Ultimate Health Men Launches in Winter Haven",
   excerpt:
-    "Ultimate Health Men brings membership-based men’s healthcare, hormone optimization, sexual wellness, and preventive care to Winter Haven.",
+    "Award-Winning Florida Healthcare Entrepreneur Launches Ultimate Health Men in Winter Haven. A journal by ftpglobal. Check it out now on DailyStrength",
   intro:
     "Ultimate Health Men has launched in Winter Haven, Florida, bringing a modern men’s health clinic model focused on prevention, performance, and easier access to care.",
   category: "Practice News",
@@ -41,7 +41,7 @@ export const blogPosts = [
   slug: "amanda-gaskin-direct-primary-care-story",
   title: "Amanda Gaskin’s Direct Primary Care Story",
   excerpt:
-    "Amanda Gaskin built a Direct Primary Care practice after seeing firsthand how traditional healthcare often leaves patients and providers without enough time.",
+    "A Nurse Practitioner Left the System During the Pandemic. Now She Runs Leesburg's First Direct Primary Care Practice.",
   intro:
     "Amanda Gaskin, MSN, APRN, built Ultimate Health Direct Primary Care after years in healthcare and a desire to create a more personal, accessible model of care.",
   category: "Direct Primary Care",

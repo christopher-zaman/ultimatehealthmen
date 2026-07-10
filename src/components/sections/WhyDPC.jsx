@@ -15,8 +15,17 @@ const benefits = [
 
 function WhyDPC() {
   return (
-    <section id="dpc" className="bg-[#0b1f33] px-6 py-24 text-white">
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+    <section
+      id="dpc"
+      className="relative isolate overflow-hidden bg-[#0b1f33] px-6 py-24 text-white"
+    >
+      {/* subtle geometric background */}
+      <div className="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full border border-white/10" />
+      <div className="pointer-events-none absolute -bottom-40 right-10 h-96 w-96 rounded-full bg-white/[0.035]" />
+      <div className="pointer-events-none absolute left-[42%] top-20 h-28 w-28 rotate-12 rounded-[1.75rem] border border-white/10" />
+      <div className="pointer-events-none absolute bottom-24 left-[12%] h-32 w-32 rotate-12 bg-[rgba(173,202,83,0.08)] [clip-path:polygon(50%_0%,0%_100%,100%_100%)]" />
+
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/50">
             Direct Primary Care
