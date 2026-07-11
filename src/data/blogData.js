@@ -3,7 +3,7 @@ export const blogPosts = [
   slug: "ultimate-health-men-launches-winter-haven",
   title: "Ultimate Health Men Launches in Winter Haven",
   excerpt:
-    "Award-Winning Florida Healthcare Entrepreneur Launches Ultimate Health Men in Winter Haven. A journal by ftpglobal. Check it out now on DailyStrength",
+    "Award-Winning Florida Healthcare Entrepreneur Launches Ultimate Health Men in Winter Haven.",
   intro:
     "Ultimate Health Men has launched in Winter Haven, Florida, bringing a modern men’s health clinic model focused on prevention, performance, and easier access to care.",
   category: "Practice News",

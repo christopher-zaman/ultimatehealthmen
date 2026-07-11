@@ -7,6 +7,8 @@ function RevealImage({
   from = "right",
   delay = 0,
   className = "",
+  imageClassName = "",
+  style,
 }) {
   const variants = {
     right: {
@@ -66,12 +68,13 @@ function RevealImage({
         delay,
       }}
       viewport={{ once: true, amount: 0.35 }}
-      className={className}
+      className={`overflow-hidden ${className}`}
+      style={style}
     >
       <img
         src={src}
         alt={alt}
-        className="h-full w-full object-cover object-center"
+        className={`h-full w-full object-cover object-center ${imageClassName}`}
       />
     </motion.div>
   );

@@ -1,20 +1,34 @@
+import RevealImage from "../ui/RevealImage";
+import aboutImage from "../../assets/images/about.webp";
+
 function AboutHero() {
   return (
-    <section className="bg-[#f5f5f7] px-6 py-28">
-      <div className="mx-auto max-w-5xl text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.30em] text-[var(--brand-navy)]">
-          About Ultimate Health Men
-        </p>
+    <section className="bg-[#f5f5f7] px-6 py-20 lg:py-28">
+      <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[0.95fr_1.05fr]">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.30em] text-[var(--brand-navy)]">
+            About Ultimate Health Men
+          </p>
 
-        <h1 className="mt-6 text-5xl font-semibold tracking-[-0.05em] text-[#1d1d1f] md:text-7xl">
-          Men deserve healthcare that sees the whole person.
-        </h1>
+          <h1 className="mt-6 text-5xl font-semibold tracking-[-0.05em] text-[#1d1d1f] md:text-7xl">
+            Men deserve healthcare that sees the whole person.
+          </h1>
 
-        <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-[var(--text-body)]">
-          Ultimate Health Men was created from personal experience, professional
-          purpose, and a belief that men should not have to wait until something
-          becomes serious to feel heard.
-        </p>
+          <p className="mt-8 max-w-2xl text-xl leading-9 text-[var(--text-body)]">
+            Ultimate Health Men was created from personal experience,
+            professional purpose, and a belief that men should not have to wait
+            until something becomes serious to feel heard.
+          </p>
+        </div>
+
+       <RevealImage
+          src={aboutImage}
+          alt="Compassionate healthcare conversation between a provider and patient"
+          className="h-[420px] w-full object-cover shadow-2xl lg:h-[560px]"
+          style={{
+            borderRadius: "38% 62% 56% 44% / 42% 36% 64% 58%",
+          }}
+        />
       </div>
     </section>
   );

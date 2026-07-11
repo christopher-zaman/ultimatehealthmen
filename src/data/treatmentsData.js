@@ -1,3 +1,7 @@
+import trtImage from "../assets/images/treatments/trt.webp";
+import semaglutideImage from "../assets/images/treatments/semaglutide.webp";
+import bpcImage from "../assets/images/treatments/bpc.webp";
+
 export const treatments = [
   {
     slug: "semaglutide",
@@ -6,6 +10,8 @@ export const treatments = [
     serviceSlug: "weight-management",
     intro:
       "Semaglutide is a medically supervised treatment that may support weight loss by helping regulate appetite, fullness, and blood sugar balance.",
+    image: semaglutideImage,
+    imageAlt: "Healthy man preparing a nutritious meal",
     price: "$100/week",
     benefits: [
       "Supports weight loss",
@@ -64,6 +70,8 @@ export const treatments = [
     serviceSlug: "hormone-optimization",
     intro:
       "TRT may help men experiencing symptoms related to low testosterone, including low energy, reduced drive, stubborn weight changes, and decreased vitality.",
+    image: trtImage,
+    imageAlt: "Energetic middle-aged man enjoying an active outdoor lifestyle",
     benefits: [
       "Supports energy and vitality",
       "May improve strength and performance",
@@ -92,6 +100,8 @@ export const treatments = [
     serviceSlug: "peptide-therapy",
     intro:
       "BPC-157 is a peptide therapy option commonly associated with healing, recovery, inflammation support, and tissue repair.",
+    image: bpcImage,
+    imageAlt: "Healthy man preparing a nutritious meal",
     benefits: [
       "Supports recovery",
       "May reduce inflammation",

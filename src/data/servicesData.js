@@ -1,8 +1,18 @@
+import directPrimaryCareImage from "../assets/images/direct-primary-care.webp";
+import ivImage from "../assets/images/iv.webp";
+import erectileDysfunctionImage from "../assets/images/ed.webp";
+import sexualWellnessImage from "../assets/images/sexual-wellness.webp";
+import hormoneOptimizationImage from "../assets/images/hormone.webp";
+import weightManagementImage from "../assets/images/weight-management.webp";
+import peptideTherapyImage from "../assets/images/peptide-therapy.webp";
 export const services = [
   {
     slug: "direct-primary-care",
     title: "Direct Primary Care",
     eyebrow: "Everyday healthcare, built around access.",
+    image: directPrimaryCareImage,
+    imageAlt:
+    "Direct Primary Care",
     intro:
       "Direct Primary Care gives men a simpler, more personal way to stay on top of their health without feeling rushed, overlooked, or bounced around the system.",
     problem:
@@ -55,6 +65,10 @@ export const services = [
     eyebrow: "Hydration and wellness support.",
     intro:
       "Elective IV Hydration is designed to support hydration, recovery, and overall wellness through carefully selected fluids and nutrients.",
+    image: ivImage,
+    imageAlt:
+    "Elective IV Hydration",
+
     problem:
       "Dehydration, fatigue, travel, workouts, and busy schedules can leave men feeling drained. IV hydration may provide supportive wellness care when clinically appropriate.",
     symptoms: [
@@ -105,6 +119,9 @@ export const services = [
     eyebrow: "Confidential care for performance and confidence.",
     intro:
       "Erectile dysfunction is common, treatable, and often connected to broader health factors. Our approach is private, respectful, and focused on identifying the right plan for you.",
+    image: erectileDysfunctionImage,
+    imageAlt:
+    "Erectile Dysfunction Treatment",
     problem:
       "ED can affect confidence, relationships, and quality of life. It may also be connected to circulation, hormones, stress, medication, or other health concerns that deserve attention.",
     symptoms: [
@@ -155,6 +172,9 @@ export const services = [
     eyebrow: "Support for confidence, performance, and health.",
     intro:
       "Sexual wellness care helps men address concerns that are often ignored, rushed, or difficult to talk about in traditional healthcare settings.",
+    image: sexualWellnessImage,
+    imageAlt:
+    "Sexual Wellness",
     problem:
       "Sexual health is part of overall health, but many men avoid bringing up concerns. A focused visit can help identify causes, reduce uncertainty, and create a practical care plan.",
     symptoms: [
@@ -205,6 +225,9 @@ export const services = [
     eyebrow: "A data-informed approach to men’s vitality.",
     intro:
       "Hormone optimization focuses on identifying whether hormone imbalance may be contributing to changes in energy, mood, strength, libido, or overall wellness.",
+    image: hormoneOptimizationImage,
+    imageAlt:
+    "Hormone Optimization",
     problem:
       "Changes in energy, motivation, body composition, mood, and libido may be connected to hormone changes. Testing and clinical review can help determine whether treatment is appropriate.",
     symptoms: [
@@ -255,6 +278,9 @@ export const services = [
     eyebrow: "Practical support for sustainable results.",
     intro:
       "Weight management care helps men approach weight loss with medical guidance, realistic planning, and support that fits their lifestyle.",
+    image: weightManagementImage,
+    imageAlt:
+    "Weight Management",
     problem:
       "Weight loss can be frustrating when men are trying to manage appetite, energy, hormones, stress, and busy schedules on their own. Medical guidance can make the process safer and clearer.",
     symptoms: [
@@ -305,6 +331,9 @@ export const services = [
     eyebrow: "Targeted wellness support.",
     intro:
       "Peptide therapy may support specific wellness goals when clinically appropriate and supervised by a qualified provider.",
+    image: peptideTherapyImage,
+    imageAlt:
+    "Peptide Therapy",
     problem:
       "Men interested in recovery, body composition, performance, or age-related wellness often encounter confusing information about peptides. Provider supervision helps determine whether therapy is appropriate and safe.",
     symptoms: [
