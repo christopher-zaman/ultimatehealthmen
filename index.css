@@ -933,41 +933,156 @@ a {
   line-height: 1.75;
 }
 
-.treatment-process-list {
+/*========================
+      Treatment Process Timeline
+===========================*/
+
+.treatment-process-layout {
   display: grid;
-  gap: 16px;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 72px;
+  align-items: start;
 }
 
-.treatment-process-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 20px;
-  padding: 24px 28px;
-  border-radius: 28px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 32px rgba(15, 23, 42, 0.04);
+.treatment-process-heading {
+  position: sticky;
+  top: 120px;
 }
 
-.treatment-process-item span {
-  display: inline-flex;
+.treatment-process-heading h2 {
+  margin-top: 12px;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+.treatment-process-intro {
+  max-width: 540px;
+  margin-top: 24px;
+  color: var(--brand-navy);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.treatment-process-timeline {
+  position: relative;
+  display: grid;
+  gap: 30px;
+}
+
+.treatment-process-line {
+  position: absolute;
+  top: 28px;
+  bottom: 28px;
+  left: 27px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    #12355b 0%,
+    #4b6382 58%,
+    #adca53 100%
+  );
+}
+
+.treatment-process-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.treatment-process-marker {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 56px;
+  height: 56px;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  flex-shrink: 0;
+  border: 5px solid #f5f5f7;
   border-radius: 999px;
-  background: #1d1d1f;
+  background: #12355b;
   color: #ffffff;
   font-size: 14px;
   font-weight: 800;
+  box-shadow: 0 12px 28px rgba(18, 53, 91, 0.2);
 }
 
-.treatment-process-item p {
+.treatment-process-marker-complete {
+  background: #adca53;
+  color: #0b1f33;
+}
+
+.treatment-process-card {
+  min-height: 112px;
+  padding: 24px 28px;
+  border: 1px solid rgba(18, 53, 91, 0.1);
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.05);
+}
+
+.treatment-process-label {
+  color: var(--brand-navy-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.treatment-process-card h3 {
+  margin-top: 8px;
   color: #1d1d1f;
-  font-size: 1.05rem;
-  font-weight: 650;
-  line-height: 1.6;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+}
+
+@media (max-width: 900px) {
+  .treatment-process-layout {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .treatment-process-heading {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .treatment-process-timeline {
+    gap: 24px;
+  }
+
+  .treatment-process-line {
+    left: 23px;
+  }
+
+  .treatment-process-step {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .treatment-process-marker {
+    width: 48px;
+    height: 48px;
+    border-width: 4px;
+  }
+
+  .treatment-process-card {
+    min-height: auto;
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .treatment-process-card h3 {
+    font-size: 1.1rem;
+  }
 }
 
 .treatment-cta {
