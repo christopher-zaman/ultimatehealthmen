@@ -29,19 +29,16 @@ function Footer() {
             </div>
           </Link>
 
-          {/* <p className="mt-6 max-w-sm leading-7 text-white/60">
-            Personalized healthcare for men focused on prevention, performance,
-            and long-term wellness.
-          </p> */}
-
           <div className="mt-8">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/45">
               Hours
             </p>
 
             <ul className="mt-3 space-y-2 text-white/65">
-              <li>Monday – Friday: 8:00 AM – 5:00 PM</li>
-              <li>Saturday: Closed</li>
+              <li>Monday – Wednesday: 8:30 AM – 5:00 PM</li>
+              <li>Thursday: 8:30 AM – 6:00 PM</li>
+              <li>Friday: 8:30 AM – 12:00 PM</li>
+              <li>Saturday: 8:30 AM – 12:00 PM</li>
               <li>Sunday: Closed</li>
             </ul>
           </div>

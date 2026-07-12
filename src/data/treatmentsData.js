@@ -8,7 +8,7 @@ import ptImage from "../assets/images/treatments/pt-141.webp";
 import tesamorelinImage from "../assets/images/treatments/tesamorelin.webp";
 import sermorelinImage from "../assets/images/treatments/sermorelin.webp";
 import ipamorelinImage from "../assets/images/treatments/ipamorelin.webp";
-import almaduoImage from "../assets/images/treatments/alma-duo.webp";
+import almaduoImage from "../assets/logos/almaduo.webp";
 import pshotImage from "../assets/images/treatments/p-shot.webp";
 import trimixImage from "../assets/images/treatments/trimix.webp";
 import edImage from "../assets/images/treatments/erectile-dysfunction.webp";
