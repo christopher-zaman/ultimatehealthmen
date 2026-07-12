@@ -1,9 +1,10 @@
 import TeamHero from "../components/team/TeamHero";
 import TeamCard from "../components/team/TeamCard";
-import TeamCTA from "../components/team/TeamCTA";
+
 import team from "../data/team";
 import SEO from "../components/seo/SEO";
 import { SITE_URL, SITE_NAME } from "../config/site";
+import ServiceCTA from "../components/service/ServiceCTA";
 
 function Team() {
   const structuredData = {
@@ -23,20 +24,17 @@ function Team() {
         canonical={`${SITE_URL}/team`}
         structuredData={structuredData}
       />
-
       <main className="team-page">
         <section className="team-section">
           <div className="team-container">
             <TeamHero />
-
             {team.map((member, index) => (
               <TeamCard key={member.id} member={member} index={index} />
             ))}
           </div>
         </section>
       </main>
-
-      <TeamCTA />
+      <ServiceCTA />
     </>
   );
 }

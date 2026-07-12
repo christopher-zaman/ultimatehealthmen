@@ -13,7 +13,7 @@ const items = [
 
 function MissionVision() {
   return (
-    <section className="bg-[#111827] px-6 py-28 text-white">
+    <section className="bg-[#111827] px-6 py-10 text-white">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
         {items.map((item) => (
           <div

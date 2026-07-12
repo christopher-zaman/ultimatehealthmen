@@ -105,7 +105,7 @@ function Navbar() {
                     ))}
                   </div>
                 </div>
-              ) : link.href.startsWith("/") && !link.href.includes("#") ? (
+              ) : (
                 <Link
                   key={link.label}
                   to={link.href}
@@ -113,14 +113,6 @@ function Navbar() {
                 >
                   {link.label}
                 </Link>
-              ) : (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-medium text-[var(--text-label)] transition hover:text-[#1d1d1f]"
-                >
-                  {link.label}
-                </a>
               )
             )}
           </div>
@@ -177,25 +169,16 @@ function Navbar() {
 
                 <span className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-[#12355b] via-[#2f6f8f] to-[#adca53] transition-transform duration-300 group-hover:scale-x-100" />
               </button>
-            ) : link.href.startsWith("/") && !link.href.includes("#") ? (
-              <Link
-                key={link.label}
-                to={link.href}
-                onClick={closeMobile}
-                className="relative overflow-hidden rounded-2xl px-4 py-4 text-2xl font-semibold tracking-tight text-[#1d1d1f] transition hover:bg-[#f5f5f7]"
-              >
-                {link.label}
-              </Link>
             ) : (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={closeMobile}
-                className="relative overflow-hidden rounded-2xl px-4 py-4 text-2xl font-semibold tracking-tight text-[#1d1d1f] transition hover:bg-[#f5f5f7]"
-              >
-                {link.label}
-              </a>
-            )
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  onClick={closeMobile}
+                  className="relative overflow-hidden rounded-2xl px-4 py-4 text-2xl font-semibold tracking-tight text-[#1d1d1f] transition hover:bg-[#f5f5f7]"
+                >
+                  {link.label}
+                </Link>
+              )
           )}
         </div>
       </div>

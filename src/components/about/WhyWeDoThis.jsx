@@ -15,7 +15,7 @@ const pillars = [
 
 function WhyWeDoThis() {
   return (
-    <section className="bg-[#111827] px-6 py-28 text-white">
+    <section className="bg-[#111827] px-6 py-10 text-white">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.30em] text-white/60">

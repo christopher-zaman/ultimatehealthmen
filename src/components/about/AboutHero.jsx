@@ -3,7 +3,7 @@ import aboutImage from "../../assets/images/about.webp";
 
 function AboutHero() {
   return (
-    <section className="bg-[#f5f5f7] px-6 py-20 lg:py-28">
+    <section className="bg-[#f5f5f7] px-6 py-20 lg:py-10">
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[0.95fr_1.05fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.30em] text-[var(--brand-navy)]">
