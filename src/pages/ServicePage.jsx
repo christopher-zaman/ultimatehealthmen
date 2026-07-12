@@ -21,7 +21,9 @@ export default function ServicePage() {
         "@type": "MedicalBusiness",
         name: SITE_NAME,
         medicalSpecialty:
-          service.slug === "direct-primary-care" ? "PrimaryCare" : "Physician",
+          service.slug === "direct-primary-care"
+            ? "PrimaryCare"
+            : "Physician",
         url: `${SITE_URL}/service/${service.slug}`,
         serviceType: service.title,
       }
@@ -39,9 +41,11 @@ export default function ServicePage() {
         <main className="service-page">
           <section className="service-hero">
             <p className="service-eyebrow">Service not found</p>
+
             <h1>This service page does not exist.</h1>
-            <Link to="/" className="service-primary-btn">
-              Back to Home
+
+            <Link to="/services" className="service-primary-btn">
+              Back to Services
             </Link>
           </section>
         </main>
@@ -73,7 +77,11 @@ export default function ServicePage() {
           items={service.symptoms}
         />
 
-        <ServiceBenefits benefits={service.benefits} />
+        <ServiceBenefits
+          benefits={service.benefits}
+          title={service.benefitsTitle}
+          eyebrow={service.benefitsEyebrow}
+        />
 
         <ServiceProcess expectations={service.expectations} />
 
@@ -86,7 +94,7 @@ export default function ServicePage() {
 
         <ServiceFAQ service={service} />
 
-        <ServiceCTA />
+        <ServiceCTA service={service} />
       </main>
     </>
   );

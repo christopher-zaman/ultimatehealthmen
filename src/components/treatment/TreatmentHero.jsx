@@ -55,6 +55,9 @@ function TreatmentHero({ treatment }) {
               src={treatment.image}
               alt={treatment.imageAlt || treatment.title}
               className="h-[360px] w-full rounded-[2rem] shadow-2xl sm:h-[420px] lg:h-[500px]"
+              style={{
+                  borderRadius: "38% 62% 56% 44% / 42% 36% 64% 58%",
+                }}
             />
           )}
         </div>

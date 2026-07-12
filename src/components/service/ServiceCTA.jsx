@@ -1,17 +1,43 @@
-import { Link } from "react-router-dom";
+import {
+  Activity,
+  ClipboardCheck,
+  HeartPulse,
+  Stethoscope,
+} from "lucide-react";
+import { siteInfo } from "../../data/siteInfo";
 
-function ServiceCTA() {
+function ServiceCTA({ service }) {
+  const description = service
+    ? `Schedule a consultation to discuss ${service.title} and learn how Ultimate Health Men can support your goals with personalized, relationship-based care.`
+    : "Schedule a consultation and start building a personalized care plan around your health, goals, and future.";
+
   return (
     <section className="service-cta">
-      <h2>Ready to take the next step?</h2>
-      <p>
-        Start with a private conversation and a care plan built around your
-        goals.
-      </p>
+      <div className="service-cta-icons" aria-hidden="true">
+        <Stethoscope className="service-cta-icon service-cta-icon-left" />
+        <Activity className="service-cta-icon service-cta-icon-top" />
+        <ClipboardCheck className="service-cta-icon service-cta-icon-right" />
+        <HeartPulse className="service-cta-icon service-cta-icon-bottom" />
+      </div>
 
-      <Link to="/contact" className="service-secondary-btn">
-        Contact Us
-      </Link>
+      <div className="service-cta-content">
+        <p className="service-cta-eyebrow">
+          Personalized men&apos;s healthcare
+        </p>
+
+        <h2>Ready to take the next step?</h2>
+
+        <p>{description}</p>
+
+        <a
+          href={siteInfo.bookingUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="service-cta-btn"
+        >
+          Book Consultation
+        </a>
+      </div>
     </section>
   );
 }

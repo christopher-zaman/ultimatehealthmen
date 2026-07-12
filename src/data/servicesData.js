@@ -5,6 +5,7 @@ import sexualWellnessImage from "../assets/images/sexual-wellness.webp";
 import hormoneOptimizationImage from "../assets/images/hormone.webp";
 import weightManagementImage from "../assets/images/weight-management.webp";
 import peptideTherapyImage from "../assets/images/peptide-therapy.webp";
+
 export const services = [
   {
     slug: "direct-primary-care",
@@ -12,7 +13,7 @@ export const services = [
     eyebrow: "Everyday healthcare, built around access.",
     image: directPrimaryCareImage,
     imageAlt:
-    "Direct Primary Care",
+      "Male patient having a relaxed conversation with a primary care provider",
     intro:
       "Direct Primary Care gives men a simpler, more personal way to stay on top of their health without feeling rushed, overlooked, or bounced around the system.",
     problem:
@@ -24,12 +25,33 @@ export const services = [
       "You want longer, more meaningful conversations",
       "You want proactive support instead of reactive care",
     ],
+    benefitsTitle: "Primary care built around access, time, and trust.",
     benefits: [
-      "More direct provider access",
-      "Longer visits and better conversations",
-      "Routine care and preventive guidance",
-      "Medication and lab review",
-      "Ongoing support for long-term health",
+      {
+        title: "More direct provider access",
+        description:
+          "Reach your provider more easily for questions, follow-up, and ongoing guidance.",
+      },
+      {
+        title: "Longer visits and better conversations",
+        description:
+          "Spend more time discussing symptoms, concerns, and health goals without feeling rushed.",
+      },
+      {
+        title: "Routine care and preventive guidance",
+        description:
+          "Stay ahead of potential concerns through regular visits, screenings, and personalized prevention planning.",
+      },
+      {
+        title: "Medication and lab review",
+        description:
+          "Review medications, laboratory results, and health trends with a provider who understands your history.",
+      },
+      {
+        title: "Ongoing support for long-term health",
+        description:
+          "Build a consistent care relationship focused on prevention, follow-up, and your long-term health goals.",
+      },
     ],
     expectations: [
       "A private consultation focused on your health goals",
@@ -63,12 +85,11 @@ export const services = [
     slug: "elective-iv-hydration",
     title: "Elective IV Hydration",
     eyebrow: "Hydration and wellness support.",
-    intro:
-      "Elective IV Hydration is designed to support hydration, recovery, and overall wellness through carefully selected fluids and nutrients.",
     image: ivImage,
     imageAlt:
-    "Elective IV Hydration",
-
+      "Male patient receiving IV hydration in a modern wellness clinic",
+    intro:
+      "Elective IV Hydration is designed to support hydration, recovery, and overall wellness through carefully selected fluids and nutrients.",
     problem:
       "Dehydration, fatigue, travel, workouts, and busy schedules can leave men feeling drained. IV hydration may provide supportive wellness care when clinically appropriate.",
     symptoms: [
@@ -78,12 +99,33 @@ export const services = [
       "You want wellness support for energy and recovery",
       "You want provider-guided hydration options",
     ],
+    benefitsTitle: "Provider-guided hydration and recovery support.",
     benefits: [
-      "Hydration support",
-      "Recovery support",
-      "Convenient wellness option",
-      "Provider-reviewed treatment",
-      "Customized approach when appropriate",
+      {
+        title: "Hydration support",
+        description:
+          "Receive fluids directly through an IV when hydration therapy is appropriate for your health needs.",
+      },
+      {
+        title: "Recovery support",
+        description:
+          "May support recovery after travel, demanding workouts, or periods of feeling depleted.",
+      },
+      {
+        title: "Convenient wellness option",
+        description:
+          "Access hydration support in a comfortable clinical setting with professional oversight.",
+      },
+      {
+        title: "Provider-reviewed treatment",
+        description:
+          "Your health history, medications, symptoms, and goals are reviewed before treatment.",
+      },
+      {
+        title: "Customized approach when appropriate",
+        description:
+          "Fluids and nutrients may be selected according to your individual needs and wellness goals.",
+      },
     ],
     expectations: [
       "Review of your health history and goals",
@@ -117,11 +159,11 @@ export const services = [
     slug: "erectile-dysfunction-treatment",
     title: "Erectile Dysfunction Treatment",
     eyebrow: "Confidential care for performance and confidence.",
-    intro:
-      "Erectile dysfunction is common, treatable, and often connected to broader health factors. Our approach is private, respectful, and focused on identifying the right plan for you.",
     image: erectileDysfunctionImage,
     imageAlt:
-    "Erectile Dysfunction Treatment",
+      "Mature couple enjoying a relaxed and affectionate moment together",
+    intro:
+      "Erectile dysfunction is common, treatable, and often connected to broader health factors. Our approach is private, respectful, and focused on identifying the right plan for you.",
     problem:
       "ED can affect confidence, relationships, and quality of life. It may also be connected to circulation, hormones, stress, medication, or other health concerns that deserve attention.",
     symptoms: [
@@ -131,12 +173,33 @@ export const services = [
       "Lower sexual satisfaction",
       "Concern that ED may be connected to health changes",
     ],
+    benefitsTitle: "Private care focused on confidence and performance.",
     benefits: [
-      "Private, judgment-free consultation",
-      "Evaluation of possible contributing factors",
-      "Personalized treatment options",
-      "Support for confidence and performance",
-      "Attention to broader men’s health concerns",
+      {
+        title: "Private, judgment-free consultation",
+        description:
+          "Discuss sensitive concerns in a confidential setting where you can speak openly and comfortably.",
+      },
+      {
+        title: "Evaluation of possible contributing factors",
+        description:
+          "Explore whether circulation, hormones, medications, stress, or other health factors may be involved.",
+      },
+      {
+        title: "Personalized treatment options",
+        description:
+          "Review treatment choices based on your symptoms, medical history, goals, and preferences.",
+      },
+      {
+        title: "Support for confidence and performance",
+        description:
+          "Receive care intended to address both physical performance and the confidence concerns that may accompany ED.",
+      },
+      {
+        title: "Attention to broader men’s health concerns",
+        description:
+          "Consider related cardiovascular, hormonal, metabolic, and lifestyle concerns as part of your evaluation.",
+      },
     ],
     expectations: [
       "Confidential discussion of symptoms and goals",
@@ -170,11 +233,11 @@ export const services = [
     slug: "sexual-wellness",
     title: "Sexual Wellness",
     eyebrow: "Support for confidence, performance, and health.",
-    intro:
-      "Sexual wellness care helps men address concerns that are often ignored, rushed, or difficult to talk about in traditional healthcare settings.",
     image: sexualWellnessImage,
     imageAlt:
-    "Sexual Wellness",
+      "Mature couple sharing a warm and supportive moment together",
+    intro:
+      "Sexual wellness care helps men address concerns that are often ignored, rushed, or difficult to talk about in traditional healthcare settings.",
     problem:
       "Sexual health is part of overall health, but many men avoid bringing up concerns. A focused visit can help identify causes, reduce uncertainty, and create a practical care plan.",
     symptoms: [
@@ -184,12 +247,33 @@ export const services = [
       "Questions about sexual health",
       "Desire for preventive screening or guidance",
     ],
+    benefitsTitle: "Respectful support for sexual health and confidence.",
     benefits: [
-      "Private conversation",
-      "Support for libido and performance concerns",
-      "Preventive sexual health guidance",
-      "Personalized treatment planning",
-      "Care without judgment",
+      {
+        title: "Private conversation",
+        description:
+          "Discuss sexual health concerns in a confidential setting without embarrassment or judgment.",
+      },
+      {
+        title: "Support for libido and performance concerns",
+        description:
+          "Explore possible causes of changes in desire, stamina, arousal, or sexual performance.",
+      },
+      {
+        title: "Preventive sexual health guidance",
+        description:
+          "Receive personalized guidance about screening, risk factors, and maintaining long-term sexual health.",
+      },
+      {
+        title: "Personalized treatment planning",
+        description:
+          "Review care options based on your symptoms, medical history, preferences, and goals.",
+      },
+      {
+        title: "Care without judgment",
+        description:
+          "Ask questions openly and receive practical, respectful guidance from a provider focused on men’s health.",
+      },
     ],
     expectations: [
       "A confidential consultation",
@@ -223,11 +307,11 @@ export const services = [
     slug: "hormone-optimization",
     title: "Hormone Optimization",
     eyebrow: "A data-informed approach to men’s vitality.",
-    intro:
-      "Hormone optimization focuses on identifying whether hormone imbalance may be contributing to changes in energy, mood, strength, libido, or overall wellness.",
     image: hormoneOptimizationImage,
     imageAlt:
-    "Hormone Optimization",
+      "Active middle-aged man enjoying an energetic outdoor lifestyle",
+    intro:
+      "Hormone optimization focuses on identifying whether hormone imbalance may be contributing to changes in energy, mood, strength, libido, or overall wellness.",
     problem:
       "Changes in energy, motivation, body composition, mood, and libido may be connected to hormone changes. Testing and clinical review can help determine whether treatment is appropriate.",
     symptoms: [
@@ -237,12 +321,33 @@ export const services = [
       "Mood changes",
       "Weight gain or body composition changes",
     ],
+    benefitsTitle: "Hormone care guided by symptoms, labs, and safety.",
     benefits: [
-      "Lab-informed evaluation",
-      "Personalized hormone review",
-      "Support for energy, vitality, and wellness",
-      "Clear discussion of treatment options",
-      "Ongoing monitoring when treatment is appropriate",
+      {
+        title: "Lab-informed evaluation",
+        description:
+          "Use laboratory testing alongside your symptoms and health history to better understand possible hormone concerns.",
+      },
+      {
+        title: "Personalized hormone review",
+        description:
+          "Review your results with a provider who can explain what they mean in the context of your overall health.",
+      },
+      {
+        title: "Support for energy, vitality, and wellness",
+        description:
+          "Address symptoms such as low energy, reduced motivation, libido changes, and declining vitality when clinically appropriate.",
+      },
+      {
+        title: "Clear discussion of treatment options",
+        description:
+          "Understand available options, potential benefits, risks, and realistic expectations before making decisions.",
+      },
+      {
+        title: "Ongoing monitoring when appropriate",
+        description:
+          "Receive follow-up testing and clinical monitoring when hormone treatment becomes part of your care plan.",
+      },
     ],
     expectations: [
       "Review of symptoms and health history",
@@ -276,11 +381,11 @@ export const services = [
     slug: "weight-management",
     title: "Weight Management",
     eyebrow: "Practical support for sustainable results.",
-    intro:
-      "Weight management care helps men approach weight loss with medical guidance, realistic planning, and support that fits their lifestyle.",
     image: weightManagementImage,
     imageAlt:
-    "Weight Management",
+      "Middle-aged man preparing a healthy meal as part of a weight-management plan",
+    intro:
+      "Weight management care helps men approach weight loss with medical guidance, realistic planning, and support that fits their lifestyle.",
     problem:
       "Weight loss can be frustrating when men are trying to manage appetite, energy, hormones, stress, and busy schedules on their own. Medical guidance can make the process safer and clearer.",
     symptoms: [
@@ -290,12 +395,33 @@ export const services = [
       "Low energy or motivation",
       "Concern about metabolic health",
     ],
+    benefitsTitle: "Medical guidance for realistic, sustainable progress.",
     benefits: [
-      "Medically guided weight loss plan",
-      "Support for appetite and lifestyle change",
-      "Lab review when needed",
-      "Clear goals and follow-up",
-      "Personalized approach to long-term progress",
+      {
+        title: "Medically guided weight loss plan",
+        description:
+          "Build a structured plan based on your health history, goals, lifestyle, and clinical needs.",
+      },
+      {
+        title: "Support for appetite and lifestyle change",
+        description:
+          "Address hunger, eating patterns, movement, sleep, and other factors that influence long-term progress.",
+      },
+      {
+        title: "Lab review when needed",
+        description:
+          "Evaluate metabolic, hormonal, or other health factors that may be affecting your ability to lose weight.",
+      },
+      {
+        title: "Clear goals and follow-up",
+        description:
+          "Set realistic milestones and review progress through ongoing appointments and adjustments.",
+      },
+      {
+        title: "Personalized approach to long-term progress",
+        description:
+          "Use recommendations designed around your body, schedule, preferences, and individual challenges.",
+      },
     ],
     expectations: [
       "Review of weight history and goals",
@@ -329,11 +455,11 @@ export const services = [
     slug: "peptide-therapy",
     title: "Peptide Therapy",
     eyebrow: "Targeted wellness support.",
-    intro:
-      "Peptide therapy may support specific wellness goals when clinically appropriate and supervised by a qualified provider.",
     image: peptideTherapyImage,
     imageAlt:
-    "Peptide Therapy",
+      "Active man stretching outdoors as part of a recovery and wellness routine",
+    intro:
+      "Peptide therapy may support specific wellness goals when clinically appropriate and supervised by a qualified provider.",
     problem:
       "Men interested in recovery, body composition, performance, or age-related wellness often encounter confusing information about peptides. Provider supervision helps determine whether therapy is appropriate and safe.",
     symptoms: [
@@ -343,12 +469,33 @@ export const services = [
       "Age-related health goals",
       "Desire for medically reviewed options",
     ],
+    benefitsTitle: "Personalized peptide care with medical oversight.",
     benefits: [
-      "Provider-guided evaluation",
-      "Personalized wellness planning",
-      "Support for specific goals when appropriate",
-      "Safety-focused review",
-      "Clear expectations before treatment",
+      {
+        title: "Provider-guided evaluation",
+        description:
+          "Review your health history, medications, symptoms, and goals before peptide therapy is considered.",
+      },
+      {
+        title: "Personalized wellness planning",
+        description:
+          "Match recommendations to your specific recovery, body composition, performance, or wellness goals.",
+      },
+      {
+        title: "Support for specific goals when appropriate",
+        description:
+          "Explore whether peptide therapy may complement a broader plan for recovery, vitality, or healthy aging.",
+      },
+      {
+        title: "Safety-focused review",
+        description:
+          "Discuss potential risks, limitations, interactions, and realistic expectations before beginning treatment.",
+      },
+      {
+        title: "Clear expectations before treatment",
+        description:
+          "Understand how treatment may be administered, monitored, and adjusted based on your response.",
+      },
     ],
     expectations: [
       "Review of your health history and goals",
