@@ -9,7 +9,7 @@ const defaultDescription =
 
 const defaultCanonical = SITE_URL;
 
-const defaultImage = `${SITE_URL}/amanda-banner.webp`;
+const defaultImage = `${SITE_URL}/ultimate-health-men-og.jpeg`;
 
 function SEO({
   title = defaultTitle,
