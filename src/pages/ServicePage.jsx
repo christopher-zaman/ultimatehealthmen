@@ -1,7 +1,12 @@
 import { Link, useParams } from "react-router-dom";
 import { services } from "../data/servicesData";
 import SEO from "../components/seo/SEO";
-import { SITE_URL, SITE_NAME } from "../config/site";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SERVICE_AREAS,
+} from "../config/site";
+import { siteInfo } from "../data/siteInfo";
 
 import ServiceHero from "../components/service/ServiceHero";
 import ServiceSplitSection from "../components/service/ServiceSplitSection";
@@ -14,20 +19,6 @@ import ServiceCTA from "../components/service/ServiceCTA";
 export default function ServicePage() {
   const { slug } = useParams();
   const service = services.find((item) => item.slug === slug);
-
-  const structuredData = service
-    ? {
-        "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        name: SITE_NAME,
-        medicalSpecialty:
-          service.slug === "direct-primary-care"
-            ? "PrimaryCare"
-            : "Physician",
-        url: `${SITE_URL}/service/${service.slug}`,
-        serviceType: service.title,
-      }
-    : null;
 
   if (!service) {
     return (
@@ -53,12 +44,47 @@ export default function ServicePage() {
     );
   }
 
+  const canonical = `${SITE_URL}/service/${service.slug}`;
+
+  const seoDescription = `${service.intro} Available in Winter Haven for patients from Auburndale, Lakeland, Bartow, and surrounding Central Florida communities.`;
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${canonical}#service`,
+    name: service.title,
+    serviceType: service.title,
+    url: canonical,
+    description: service.intro,
+
+    provider: {
+      "@type": "MedicalBusiness",
+      "@id": `${SITE_URL}/#medicalbusiness`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      telephone: siteInfo.phoneRaw,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteInfo.address.street,
+        addressLocality: siteInfo.address.city,
+        addressRegion: siteInfo.address.state,
+        postalCode: siteInfo.address.zip,
+        addressCountry: siteInfo.address.country,
+      },
+    },
+
+    areaServed: SERVICE_AREAS.map((city) => ({
+      "@type": "City",
+      name: city,
+    })),
+  };
+
   return (
     <>
       <SEO
-        title={`${service.title} | ${SITE_NAME}`}
-        description={service.intro}
-        canonical={`${SITE_URL}/service/${service.slug}`}
+        title={`${service.title} in Winter Haven, FL | ${SITE_NAME}`}
+        description={seoDescription}
+        canonical={canonical}
         structuredData={structuredData}
       />
 
@@ -91,6 +117,24 @@ export default function ServicePage() {
           body={service.whyUHM}
           dark
         />
+
+        <section className="service-section">
+          <div className="service-section-header">
+            <p className="service-eyebrow">
+              Serving Central Florida
+            </p>
+
+            <h2>
+              Care in Winter Haven for men across Polk County.
+            </h2>
+
+            <p>
+              Ultimate Health Men welcomes patients from Winter Haven,
+              Auburndale, Lakeland, Bartow, and nearby Central Florida
+              communities.
+            </p>
+          </div>
+        </section>
 
         <ServiceFAQ service={service} />
 

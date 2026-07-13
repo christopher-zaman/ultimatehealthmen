@@ -7,13 +7,29 @@ import { siteInfo } from "../data/siteInfo";
 
 function Contact() {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    name: `Contact ${SITE_NAME}`,
-    url: `${SITE_URL}/contact`,
-    description:
-      "Contact Ultimate Health Men in Winter Haven, FL. Call, book online, or visit our office for private, personalized men's healthcare.",
-  };
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": `${SITE_URL}/contact#contactpage`,
+  name: `Contact ${SITE_NAME}`,
+  url: `${SITE_URL}/contact`,
+  description:
+    "Contact Ultimate Health Men in Winter Haven, FL. We welcome patients from Auburndale, Lakeland, Bartow, and surrounding Central Florida communities.",
+
+  about: {
+    "@type": "MedicalBusiness",
+    "@id": `${SITE_URL}/#medicalbusiness`,
+    name: SITE_NAME,
+    telephone: siteInfo.phoneRaw,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteInfo.address.street,
+      addressLocality: siteInfo.address.city,
+      addressRegion: siteInfo.address.state,
+      postalCode: siteInfo.address.zip,
+      addressCountry: siteInfo.address.country,
+    },
+  },
+};
 
   const expectations = [
     "Private, judgment-free conversations",
@@ -25,11 +41,11 @@ function Contact() {
   return (
     <>
       <SEO
-        title={`Contact ${SITE_NAME} | Winter Haven Men's Health Clinic`}
-        description="Contact Ultimate Health Men in Winter Haven, FL. Call, book online, or visit our office for private, personalized men's healthcare."
-        canonical={`${SITE_URL}/contact`}
-        structuredData={structuredData}
-      />
+          title={`Contact ${SITE_NAME} | Winter Haven, FL`}
+          description="Contact Ultimate Health Men in Winter Haven, FL. We welcome patients from Auburndale, Lakeland, Bartow, and surrounding Central Florida communities."
+          canonical={`${SITE_URL}/contact`}
+          structuredData={structuredData}
+        />
 
       <main className="bg-[#f5f5f7] text-[#1d1d1f]">
         <section className="mx-auto max-w-7xl px-6 pb-16 pt-20">
@@ -40,13 +56,13 @@ function Contact() {
               </p>
 
               <h1 className="text-5xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-                Start the conversation about better men’s health.
+                Visit our men’s health clinic in Winter Haven.
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--text-muted)] sm:text-xl">
-                Have a question, want to learn more, or ready to schedule?
-                Reach out to {SITE_NAME} and take the next step toward direct,
-                personalized care.
+                Reach out to {SITE_NAME} for private, personalized care in Winter
+                Haven. We also welcome patients from Auburndale, Lakeland, Bartow,
+                and surrounding Central Florida communities.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">

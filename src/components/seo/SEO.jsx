@@ -1,10 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { SITE_URL, SITE_NAME } from "../../config/site";
 
-const defaultTitle = `${SITE_NAME} | Men's Health Clinic in Winter Haven`;
+const defaultTitle =
+  `${SITE_NAME} | Men’s Health Clinic in Winter Haven, FL`;
 
 const defaultDescription =
-  "Private men's healthcare in Winter Haven specializing in Direct Primary Care, hormone optimization, weight management, erectile dysfunction treatment, peptide therapy, and preventive care.";
+  "Private men’s healthcare in Winter Haven, FL, serving Auburndale, Lakeland, Bartow, and surrounding Central Florida communities.";
 
 const defaultCanonical = SITE_URL;
 
