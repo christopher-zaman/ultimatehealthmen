@@ -42,7 +42,7 @@ const contactItems = [
 
 function ContactInfo() {
   return (
-    <section className="bg-white px-6 pb-28 pt-8">
+    <section className="bg-white px-6 pb-10 pt-8">
       <div className="relative mx-auto grid max-w-7xl gap-8 overflow-hidden lg:grid-cols-[0.88fr_1.12fr] lg:items-stretch">
         <div className="relative overflow-hidden rounded-[3rem] bg-[#f5f7fa] p-7 ring-1 ring-black/5 sm:p-10 lg:p-12">
           {/* Decorative shapes */}

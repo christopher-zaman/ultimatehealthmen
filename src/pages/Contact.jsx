@@ -4,6 +4,7 @@ import ExpandingCallCTA from "../components/ui/ExpandingCallCTA";
 import SEO from "../components/seo/SEO";
 import { SITE_URL, SITE_NAME } from "../config/site";
 import { siteInfo } from "../data/siteInfo";
+import ContactForm from "../components/contact/ContactForm";
 
 function Contact() {
   const structuredData = {
@@ -97,9 +98,32 @@ function Contact() {
               </div>
             </div>
           </div>
-        </section>
+                </section>
 
         <ContactSection />
+
+        <section className="bg-white px-6 py-16 sm:py-10">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-10 text-center">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--text-label)]">
+                Send an inquiry
+              </p>
+
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-[#1d1d1f] sm:text-4xl">
+                Tell us how we can help.
+              </h2>
+
+              <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[var(--text-muted)]">
+                Complete the form and a member of the Ultimate Health Men team
+                will follow up with you.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] border border-black/5 bg-[#f5f5f7] p-6 shadow-sm sm:p-10">
+              <ContactForm />
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
