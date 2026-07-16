@@ -1,3 +1,4 @@
+
 import { Resend } from "resend";
 import clientPromise from "./mongodb.js";
 
@@ -53,25 +54,27 @@ export default async function handler(request, response) {
     }
 
     const submission = {
-      firstName: cleanText(requestBody.firstName, 100),
-      lastName: cleanText(requestBody.lastName, 100),
-      email: cleanText(
-        requestBody.email,
-        200
-      ).toLowerCase(),
-      phone: cleanText(requestBody.phone, 50),
-      service: cleanText(requestBody.service, 150),
-      preferredContactMethod: cleanText(
-        requestBody.preferredContactMethod,
-        50
-      ),
-      message: cleanText(requestBody.message, 3000),
-      consent: requestBody.consent === true,
+        firstName: cleanText(requestBody.firstName, 100),
+        lastName: cleanText(requestBody.lastName, 100),
+        email: cleanText(requestBody.email, 200).toLowerCase(),
+        phone: cleanText(requestBody.phone, 50),
+        service: cleanText(requestBody.service, 150),
+        preferredContactMethod: cleanText(
+            requestBody.preferredContactMethod,
+            50
+        ),
+        message: cleanText(requestBody.message, 3000),
+        consent: requestBody.consent === true,
 
-      status: "new",
-      source: "ultimate-health-men-contact-form",
-      formVersion: 1,
-      createdAt: new Date(),
+        status: "new",
+        page: cleanText(requestBody.page, 250) || "/contact",
+        userAgent: cleanText(
+            request.headers["user-agent"],
+            500
+        ),
+        source: "ultimate-health-men-contact-form",
+        formVersion: 1,
+        createdAt: new Date(),
     };
 
     if (

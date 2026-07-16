@@ -60,6 +60,7 @@ function Footer() {
             <Link to="/contact" className="transition hover:text-white">
               Contact
             </Link>
+            <Link to="/privacy-policy" className="transition hover:text-white">Privacy Policy</Link>
           </div>
         </div>
 

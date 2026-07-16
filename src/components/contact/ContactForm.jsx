@@ -44,7 +44,10 @@ function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          page: window.location.pathname,
+        }),
       });
 
       const result = await response.json();

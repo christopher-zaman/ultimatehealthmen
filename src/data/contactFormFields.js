@@ -52,7 +52,7 @@ export const contactFormFields = [
   },
   {
     name: "message",
-    label: "How can we help?",
+    label: "What service are you interested in?",
     type: "textarea",
     required: true,
   },
