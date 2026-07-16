@@ -51,8 +51,8 @@ export const contactFormFields = [
     options: ["Phone", "Email", "Text message"],
   },
   {
-    name: "message",
-    label: "What service are you interested in?",
+    name: "message",  
+    label: "Questions or concerns?",
     type: "textarea",
     required: true,
   },

@@ -120,7 +120,7 @@ function Contact() {
             </div>
 
             <div className="rounded-[2rem] border border-black/5 bg-[#f5f5f7] p-6 shadow-sm sm:p-10">
-              <ContactForm />
+              <ContactForm sourcePage="/contact" />
             </div>
           </div>
         </section>

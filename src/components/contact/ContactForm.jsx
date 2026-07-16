@@ -119,6 +119,16 @@ function ContactForm({
     }
 
     if (field.type === "select") {
+      const options = [...field.options];
+
+    if (
+        field.name === "service" &&
+        defaultService &&
+        !options.includes(defaultService)
+      ) {
+        options.unshift(defaultService);
+    }
+
       return (
         <select
           id={field.name}
@@ -128,24 +138,17 @@ function ContactForm({
           required={field.required}
           className={fieldClassName}
         >
-          <option value="">Select an option</option>
+          <option value="">
+            {field.name === "service"
+              ? "Select a service"
+              : "Select an option"}
+          </option>
 
-          {field.options.map((option) => (
+          {options.map((option) => (
             <option value={option} key={option}>
               {option}
             </option>
           ))}
-
-          {/*
-            This ensures treatment names not already present in
-            contactFormFields still appear as valid options.
-          */}
-          {defaultService &&
-            !field.options.includes(defaultService) && (
-              <option value={defaultService}>
-                {defaultService}
-              </option>
-            )}
         </select>
       );
     }
