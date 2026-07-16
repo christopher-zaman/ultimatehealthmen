@@ -8,6 +8,7 @@ import TreatmentOverview from "../components/treatment/TreatmentOverview";
 import TreatmentBenefits from "../components/treatment/TreatmentBenefits";
 import TreatmentExpectations from "../components/treatment/TreatmentExpectations";
 import TreatmentCTA from "../components/treatment/TreatmentCTA";
+import TreatmentContactSection from "../components/treatment/TreatmentContactSection";
 
 function TreatmentPage() {
   const { slug } = useParams();
@@ -62,6 +63,7 @@ function TreatmentPage() {
         <TreatmentBenefits treatment={treatment} />
         <TreatmentExpectations />
         <TreatmentCTA treatment={treatment} />
+        <TreatmentContactSection treatment={treatment} />
       </main>
     </>
   );

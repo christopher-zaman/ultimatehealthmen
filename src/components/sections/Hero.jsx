@@ -8,7 +8,7 @@ import { siteInfo } from "../../data/siteInfo";
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#f7f7f9] to-[#f5f5f7] px-6 pb-16 pt-10 sm:py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#f7f7f9] to-[#f5f5f7] px-6 pb-16 pt-10 sm:py-20 lg:py-10">
       <div className="radial-glow glow-green -right-24 top-20 h-80 w-80" />
       <div className="radial-glow glow-navy bottom-10 right-40 h-96 w-96" />
 

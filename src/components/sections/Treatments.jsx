@@ -78,7 +78,7 @@ const servicePills = [
 
 function Treatments() {
   return (
-    <section id="services" className="bg-white px-6 py-28">
+    <section id="services" className="bg-white px-6 py-15">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <SectionHeading

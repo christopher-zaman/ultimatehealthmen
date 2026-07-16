@@ -1,26 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { contactFormFields } from "../../data/contactFormFields";
 
-const initialFormData = {
+const createInitialFormData = (defaultService = "") => ({
   firstName: "",
   lastName: "",
   email: "",
   phone: "",
-  service: "",
+  service: defaultService,
   preferredContactMethod: "",
   message: "",
   consent: false,
 
   // Honeypot spam field.
   website: "",
-};
+});
 
-function ContactForm() {
-  const [formData, setFormData] = useState(initialFormData);
+function ContactForm({
+  defaultService = "",
+  sourcePage = "",
+}) {
+  const [formData, setFormData] = useState(() =>
+    createInitialFormData(defaultService)
+  );
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formMessage, setFormMessage] = useState("");
   const [formMessageType, setFormMessageType] = useState("");
+
+  /*
+    Update the preselected service when navigating directly
+    between treatment pages without a full page refresh.
+  */
+  useEffect(() => {
+    setFormData((currentFormData) => ({
+      ...currentFormData,
+      service: defaultService,
+    }));
+  }, [defaultService]);
 
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
@@ -38,6 +55,9 @@ function ContactForm() {
     setFormMessage("");
     setFormMessageType("");
 
+    const submittedFrom =
+      sourcePage || window.location.pathname;
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -46,7 +66,14 @@ function ContactForm() {
         },
         body: JSON.stringify({
           ...formData,
-          page: window.location.pathname,
+
+          // Useful for the email subject and body.
+          subject: defaultService
+            ? `Treatment inquiry: ${defaultService}`
+            : "Website contact inquiry",
+
+          page: submittedFrom,
+          submittedFrom,
         }),
       });
 
@@ -58,7 +85,7 @@ function ContactForm() {
         );
       }
 
-      setFormData(initialFormData);
+      setFormData(createInitialFormData(defaultService));
       setFormMessage(result.message);
       setFormMessageType("success");
     } catch (error) {
@@ -75,7 +102,7 @@ function ContactForm() {
 
   function renderField(field) {
     const fieldClassName =
-  "mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-base text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-[#12355b] focus:ring-2 focus:ring-[#12355b]/15";
+      "mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-base text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-[#12355b] focus:ring-2 focus:ring-[#12355b]/15";
 
     if (field.type === "textarea") {
       return (
@@ -108,6 +135,17 @@ function ContactForm() {
               {option}
             </option>
           ))}
+
+          {/*
+            This ensures treatment names not already present in
+            contactFormFields still appear as valid options.
+          */}
+          {defaultService &&
+            !field.options.includes(defaultService) && (
+              <option value={defaultService}>
+                {defaultService}
+              </option>
+            )}
         </select>
       );
     }
@@ -128,8 +166,8 @@ function ContactForm() {
 
   return (
     <form
-        onSubmit={handleSubmit}
-        className="relative space-y-6"
+      onSubmit={handleSubmit}
+      className="relative space-y-6"
     >
       <div className="grid gap-x-6 gap-y-7 md:grid-cols-2">
         {contactFormFields.map((field) => (
@@ -157,12 +195,11 @@ function ContactForm() {
         ))}
       </div>
 
-      {/* 
-        Honeypot spam field.
-        It is hidden from normal visitors.
-        Bots often fill every field they find.
-      */}
-      <div className="absolute -left-[9999px]">
+      {/* Honeypot spam field */}
+      <div
+        className="absolute -left-[9999px]"
+        aria-hidden="true"
+      >
         <label htmlFor="website">
           Website
         </label>
@@ -173,7 +210,7 @@ function ContactForm() {
           type="text"
           value={formData.website}
           onChange={handleChange}
-          tabIndex="-1"
+          tabIndex={-1}
           autoComplete="off"
         />
       </div>

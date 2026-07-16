@@ -24,7 +24,7 @@ const reasons = [
 
 function WhyMenChoose() {
   return (
-    <section className="relative overflow-hidden bg-[#f5f5f7] px-6 py-28">
+    <section className="relative overflow-hidden bg-[#f5f5f7] px-6 py-10">
       <div className="radial-glow glow-navy -left-40 top-20 h-96 w-96" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
