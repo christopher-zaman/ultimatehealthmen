@@ -512,11 +512,28 @@ function NewBlogForm({
                   <label
                     htmlFor={`body-${index}`}
                     className="text-sm font-semibold"
-                  >
+                    >
                     Section body
-                  </label>
+                    </label>
 
-                  <textarea
+                    <p className="mt-1 text-sm leading-6 text-[var(--brand-navy-light)]">
+                    Use a blank line for a new paragraph. Start
+                    bulleted items with{" "}
+                    <code className="rounded bg-black/5 px-1.5 py-0.5 text-xs">
+                        - item
+                    </code>
+                    , numbered items with{" "}
+                    <code className="rounded bg-black/5 px-1.5 py-0.5 text-xs">
+                        1. item
+                    </code>
+                    , and bold text with{" "}
+                    <code className="rounded bg-black/5 px-1.5 py-0.5 text-xs">
+                        **text**
+                    </code>
+                    .
+                    </p>
+
+                    <textarea
                     id={`body-${index}`}
                     value={section.body}
                     onChange={(event) =>
