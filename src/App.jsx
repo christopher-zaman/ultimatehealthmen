@@ -13,6 +13,7 @@ import TreatmentsPage from "./pages/TreatmentsPage";
 import TreatmentPage from "./pages/TreatmentPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import NewBlogPage from "./pages/NewBlogPage";
 import Accessibility from "./pages/Accessibility";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/accessibility" element={<Accessibility />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/newblog" element={<NewBlogPage />} />
         </Routes>
       </main>
 
