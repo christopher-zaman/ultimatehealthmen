@@ -30,11 +30,11 @@ function Footer() {
           </Link>
 
           <div className="mt-8">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/45">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/70">
               Hours
             </p>
 
-            <ul className="mt-3 space-y-2 text-white/65">
+            <ul className="mt-3 space-y-2 text-white/75">
               <li>Monday – Wednesday: 8:30 AM – 5:00 PM</li>
               <li>Thursday: 8:30 AM – 6:00 PM</li>
               <li>Friday: 8:30 AM – 12:00 PM</li>
@@ -47,30 +47,40 @@ function Footer() {
         <div>
           <p className="font-semibold">Explore</p>
 
-          <div className="mt-4 flex flex-col gap-3 text-white/55">
+          <div className="mt-4 flex flex-col gap-3 text-white/75">
             <Link to="/services" className="transition hover:text-white">
               Services
             </Link>
+
             <Link to="/about" className="transition hover:text-white">
               About
             </Link>
+
             <a href="/#faq" className="transition hover:text-white">
               FAQ
             </a>
+
             <Link to="/contact" className="transition hover:text-white">
               Contact
             </Link>
-            <Link to="/privacy-policy" className="transition hover:text-white">Privacy Policy</Link>
+
+            <Link
+              to="/privacy-policy"
+              className="transition hover:text-white"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </div>
 
         <div>
           <p className="font-semibold">Contact</p>
 
-          <div className="mt-4 flex flex-col gap-3 text-white/55">
+          <div className="mt-4 flex flex-col gap-3 text-white/75">
             <a href={siteInfo.phoneHref} className="transition hover:text-white">
               352-901-6582
             </a>
+
             <span>Winter Haven, FL</span>
             <span>By appointment</span>
           </div>
@@ -81,7 +91,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/40 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/70 md:flex-row md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} Ultimate Health Men.</p>
         <p>Powered by Ultimate Health Direct Primary Care.</p>
       </div>

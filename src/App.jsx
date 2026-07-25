@@ -1,21 +1,27 @@
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
 import MobileActionBar from "./components/layout/MobileActionBar";
-import Team from "./pages/Team";
-import ServicePage from "./pages/ServicePage";
-import ServicesPage from "./pages/ServicesPage";
 import ScrollToTop from "./components/ScrollToTop";
-import TreatmentsPage from "./pages/TreatmentsPage";
-import TreatmentPage from "./pages/TreatmentPage";
-import BlogPage from "./pages/BlogPage";
-import BlogPostPage from "./pages/BlogPostPage";
-import NewBlogPage from "./pages/NewBlogPage";
-import Accessibility from "./pages/Accessibility";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
+
+// Keep the homepage eager because it is the initial PageSpeed-tested route.
+import Home from "./pages/Home";
+
+// Load secondary routes only when they are visited.
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Team = lazy(() => import("./pages/Team"));
+const ServicePage = lazy(() => import("./pages/ServicePage"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+const TreatmentsPage = lazy(() => import("./pages/TreatmentsPage"));
+const TreatmentPage = lazy(() => import("./pages/TreatmentPage"));
+const BlogPage = lazy(() => import("./pages/BlogPage"));
+const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
+const NewBlogPage = lazy(() => import("./pages/NewBlogPage"));
+const Accessibility = lazy(() => import("./pages/Accessibility"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 function App() {
   return (
@@ -25,21 +31,31 @@ function App() {
       <ScrollToTop />
 
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/service/:slug" element={<ServicePage />} />
-          <Route path="/treatments" element={<TreatmentsPage />} />
-          <Route path="/treatment/:slug" element={<TreatmentPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="/accessibility" element={<Accessibility />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/newblog" element={<NewBlogPage />} />
-        </Routes>
+        <Suspense
+          fallback={
+            <div
+              className="min-h-[50vh]"
+              aria-label="Loading page"
+              role="status"
+            />
+          }
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/service/:slug" element={<ServicePage />} />
+            <Route path="/treatments" element={<TreatmentsPage />} />
+            <Route path="/treatment/:slug" element={<TreatmentPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/newblog" element={<NewBlogPage />} />
+          </Routes>
+        </Suspense>
       </main>
 
       <Footer />
