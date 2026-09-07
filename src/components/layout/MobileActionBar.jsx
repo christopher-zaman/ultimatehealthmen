@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import ExpandingCTA from "../ui/ExpandingCTA";
 import ExpandingCallCTA from "../ui/ExpandingCallCTA";
 import { siteInfo } from "../../data/siteInfo";
+import { trackHormoneBookingClick } from "../../utils/analytics";
 
 const HORMONE_EVALUATION_URL =
   "https://app.elationemr.com/book/UltimateHealthDPC/service-locations/1283934613995767?appointment_types=598882342010985";
@@ -63,11 +64,16 @@ function MobileActionBar() {
             />
 
             <ExpandingCTA
-              href={bookingUrl}
-              className="flex-1 justify-center"
-            >
-              Book Visit
-            </ExpandingCTA>
+            href={bookingUrl}
+            onClick={() => {
+              if (isHormoneLandingPage) {
+                trackHormoneBookingClick("mobile_action_bar");
+              }
+            }}
+            className="flex-1 justify-center"
+          >
+            Book Visit
+          </ExpandingCTA>
           </div>
         </motion.div>
       )}

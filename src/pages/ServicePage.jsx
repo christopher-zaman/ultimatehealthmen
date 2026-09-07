@@ -15,6 +15,7 @@ import ServiceBenefits from "../components/service/ServiceBenefits";
 import ServiceProcess from "../components/service/ServiceProcess";
 import ServiceFAQ from "../components/service/ServiceFAQ";
 import ServiceCTA from "../components/service/ServiceCTA";
+import HormoneEvaluationCallout from "../components/seo/HormoneEvaluationCallout";
 
 export default function ServicePage() {
   const { slug } = useParams();
@@ -102,6 +103,14 @@ export default function ServicePage() {
           title="This service may be right for you if..."
           items={service.symptoms}
         />
+
+        {service.slug === "direct-primary-care" && (
+          <HormoneEvaluationCallout variant="primaryCare" />
+        )}
+
+        {service.slug === "weight-management" && (
+          <HormoneEvaluationCallout variant="weightManagement" />
+        )}
 
         <ServiceBenefits
           benefits={service.benefits}

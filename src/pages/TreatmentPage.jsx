@@ -9,6 +9,7 @@ import TreatmentBenefits from "../components/treatment/TreatmentBenefits";
 import TreatmentExpectations from "../components/treatment/TreatmentExpectations";
 import TreatmentCTA from "../components/treatment/TreatmentCTA";
 import TreatmentContactSection from "../components/treatment/TreatmentContactSection";
+import HormoneEvaluationCallout from "../components/seo/HormoneEvaluationCallout";
 
 function TreatmentPage() {
   const { slug } = useParams();
@@ -60,6 +61,11 @@ function TreatmentPage() {
       <main className="treatment-page">
         <TreatmentHero treatment={treatment} />
         <TreatmentOverview treatment={treatment} />
+        {
+          treatment.slug === "testosterone-replacement-therapy" && (
+          <HormoneEvaluationCallout variant="trt" />
+        )
+        }
         <TreatmentBenefits treatment={treatment} />
         <TreatmentExpectations />
         <TreatmentCTA treatment={treatment} />
