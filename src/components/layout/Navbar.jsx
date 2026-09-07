@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   ArrowRight,
   ChevronLeft,
@@ -51,6 +51,13 @@ const navLinks = [
 ];
 
 function Navbar() {
+
+  const location = useLocation();
+  const isHormoneLandingPage = location.pathname === "/mens-hormone-testing-winter-haven";
+  const bookingUrl = isHormoneLandingPage
+    ? "https://app.elationemr.com/book/UltimateHealthDPC/service-locations/1283934613995767?appointment_types=598882342010985"
+    : siteInfo.bookingUrl;
+
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobilePanel, setMobilePanel] = useState(null);
 
@@ -119,7 +126,7 @@ function Navbar() {
 
           <div className="hidden lg:block">
             <a
-              href={siteInfo.bookingUrl}
+              href={bookingUrl}
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-[#1d1d1f] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black"

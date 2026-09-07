@@ -7,4 +7,6 @@ export const SERVICE_AREAS = [
   "Auburndale",
   "Lakeland",
   "Bartow",
+  "Lake Wales",
+  "Polk County",
 ];

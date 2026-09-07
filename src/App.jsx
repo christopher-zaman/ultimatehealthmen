@@ -22,6 +22,8 @@ const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
 const NewBlogPage = lazy(() => import("./pages/NewBlogPage"));
 const Accessibility = lazy(() => import("./pages/Accessibility"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const MensHormoneTestingPage = lazy(() => import("./pages/MensHormoneTestingPage"));
+
 
 function App() {
   return (
@@ -54,6 +56,7 @@ function App() {
             <Route path="/accessibility" element={<Accessibility />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/newblog" element={<NewBlogPage />} />
+            <Route path="/mens-hormone-testing-winter-haven" element={<MensHormoneTestingPage />}/>
           </Routes>
         </Suspense>
       </main>
