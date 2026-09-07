@@ -136,6 +136,18 @@ const structuredData = [
   },
 ];
 
+function trackHormoneBookingClick(ctaLocation) {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", "hormone_evaluation_booking_click", {
+      location: "winter_haven",
+      appointment_type: "male_hormone_consult",
+      appointment_value: 175,
+      page: "mens_hormone_testing",
+      cta_location: ctaLocation,
+    });
+  }
+}
+
 function MensHormoneTestingPage() {
   return (
     <>
@@ -177,10 +189,11 @@ function MensHormoneTestingPage() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href={BOOKING_URL}
-                  className="inline-flex items-center justify-center rounded-full bg-[#0f1740] px-7 py-3.5 font-semibold text-white transition hover:opacity-90"
-                >
-                  Book Your $175 Evaluation
+                    href={BOOKING_URL}
+                    onClick={() => trackHormoneBookingClick("hero")}
+                    className="inline-flex items-center justify-center rounded-full bg-[#0f1740] px-7 py-3.5 font-semibold text-white transition hover:opacity-90"
+                    >
+                    Book Your $175 Evaluation
                 </a>
 
                 <a
@@ -364,10 +377,11 @@ function MensHormoneTestingPage() {
             </div>
 
             <a
-              href={BOOKING_URL}
-              className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#94c742] px-7 py-3.5 font-semibold text-[#0f1740] transition hover:opacity-90"
+            href={BOOKING_URL}
+            onClick={() => trackHormoneBookingClick("middle")}
+            className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#94c742] px-7 py-3.5 font-semibold text-[#0f1740] transition hover:opacity-90"
             >
-              Book Your $175 Evaluation
+            Book Your $175 Evaluation
             </a>
           </div>
         </section>
@@ -556,10 +570,11 @@ function MensHormoneTestingPage() {
             </div>
 
             <a
-              href={BOOKING_URL}
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-[#94c742] px-8 py-3.5 font-semibold text-[#0f1740] transition hover:opacity-90"
+            href={BOOKING_URL}
+            onClick={() => trackHormoneBookingClick("bottom")}
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-[#94c742] px-8 py-3.5 font-semibold text-[#0f1740] transition hover:opacity-90"
             >
-              Book Your Evaluation
+            Book Your Evaluation
             </a>
 
             <div className="mt-9 border-t border-white/10 pt-7 text-white/75">
