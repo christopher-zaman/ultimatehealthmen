@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        overflow: hidden;
+      }
+
+      #bf-revz-widget-1234567893011151831467731 {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      id="bf-revz-widget-1234567893011151831467731"
+    ></div>
+
+    <script
+      type="text/javascript"
+      src="https://birdeye.com/embed/v7/178899394787926/11/1234567893011151831467731"
+      async
+    ></script>
+
+    <script>
+      const widget = document.getElementById(
+        "bf-revz-widget-1234567893011151831467731"
+      );
+
+      function reportHeight() {
+        const height = Math.max(
+          widget.scrollHeight,
+          widget.offsetHeight,
+          300
+        );
+
+        window.parent.postMessage(
+          {
+            type: "birdeye-widget-height",
+            height,
+          },
+          window.location.origin
+        );
+      }
+
+      const resizeObserver = new ResizeObserver(reportHeight);
+
+      resizeObserver.observe(widget);
+
+      window.addEventListener("load", reportHeight);
+
+      setTimeout(reportHeight, 500);
+      setTimeout(reportHeight, 1500);
+      setTimeout(reportHeight, 3000);
+    </script>
+  </body>
+</html>

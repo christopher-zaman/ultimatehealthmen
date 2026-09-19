@@ -12,6 +12,7 @@ import FinalCTA from "../components/sections/FinalCTA";
 import AnimatedSection from "../components/ui/AnimatedSection";
 import SEO from "../components/seo/SEO";
 import { siteInfo } from "../data/siteInfo";
+import BirdeyeReviews from "../components/sections/BirdeyeReviews";
 import {
   SITE_URL,
   SITE_NAME,
@@ -99,6 +100,8 @@ function Home() {
       <AnimatedSection delay={0.05}>
         <TrustSection />
       </AnimatedSection>
+
+      <BirdeyeReviews />
 
       <AnimatedSection delay={0.05}>
         <ServiceArea />

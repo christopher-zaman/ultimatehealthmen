@@ -407,7 +407,10 @@ export default async function handler(request, response) {
 
     const emailResult = await resend.emails.send({
       from: fromEmail,
-      to: notificationEmail,
+      to: [
+        notificationEmail,
+        "178899394787926@leads.birdeye.com",
+      ],
       replyTo: submission.email,
       subject: createEmailSubject(submission),
       html: createEmailHtml(
