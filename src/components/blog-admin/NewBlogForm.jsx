@@ -13,6 +13,9 @@ const emptySection = {
 
 const initialForm = {
   title: "",
+  slug: "",
+  seoTitle: "",
+  metaDescription: "",
   excerpt: "",
   intro: "",
   category: "Men’s Health",
@@ -281,6 +284,24 @@ function NewBlogForm({
             </div>
 
             <div>
+              <label htmlFor="slug" className="text-sm font-semibold">URL slug</label>
+              <p className="mt-1 text-sm text-[var(--brand-navy-light)]">Optional. Enter only the part after /blog/. Leave blank to generate it from the title.</p>
+              <input id="slug" name="slug" value={form.slug} onChange={updateField} maxLength={150} pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="mens-health-clinic-winter-haven-fl" className="mt-2 w-full rounded-2xl border border-black/15 px-4 py-3 outline-none transition focus:border-[#0b1f33] focus:ring-4 focus:ring-[#0b1f33]/10" />
+            </div>
+
+            <div>
+              <label htmlFor="seoTitle" className="text-sm font-semibold">SEO title</label>
+              <p className="mt-1 text-sm text-[var(--brand-navy-light)]">Optional browser and search title; leave blank to use the article title.</p>
+              <input id="seoTitle" name="seoTitle" value={form.seoTitle} onChange={updateField} maxLength={200} className="mt-2 w-full rounded-2xl border border-black/15 px-4 py-3 outline-none transition focus:border-[#0b1f33] focus:ring-4 focus:ring-[#0b1f33]/10" />
+            </div>
+
+            <div>
+              <label htmlFor="metaDescription" className="text-sm font-semibold">Meta description</label>
+              <p className="mt-1 text-sm text-[var(--brand-navy-light)]">Optional search summary; leave blank to use the excerpt.</p>
+              <textarea id="metaDescription" name="metaDescription" value={form.metaDescription} onChange={updateField} maxLength={500} rows={3} className="mt-2 w-full resize-y rounded-2xl border border-black/15 px-4 py-3 outline-none transition focus:border-[#0b1f33] focus:ring-4 focus:ring-[#0b1f33]/10" />
+            </div>
+
+            <div>
               <label
                 htmlFor="excerpt"
                 className="text-sm font-semibold"
@@ -289,8 +310,7 @@ function NewBlogForm({
               </label>
 
               <p className="mt-1 text-sm text-[var(--brand-navy-light)]">
-                A short summary displayed on the blog
-                card and in search results.
+                A short summary displayed on the blog card and article page.
               </p>
 
               <textarea
@@ -530,7 +550,8 @@ function NewBlogForm({
                     <code className="rounded bg-black/5 px-1.5 py-0.5 text-xs">
                         **text**
                     </code>
-                    .
+                    , and internal links with{" "}
+                    <code className="rounded bg-black/5 px-1.5 py-0.5 text-xs">[link text](/service/direct-primary-care)</code>.
                     </p>
 
                     <textarea

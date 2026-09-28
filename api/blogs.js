@@ -136,6 +136,9 @@ function createPostFromRequest(requestBody) {
 
   return {
     title,
+    requestedSlug: cleanSlug(requestBody.slug),
+    seoTitle: cleanText(requestBody.seoTitle, 200),
+    metaDescription: cleanText(requestBody.metaDescription, 500),
     excerpt,
     intro,
     content,
@@ -154,6 +157,9 @@ function createPostFromRequest(requestBody) {
 }
 
 function validatePost(post) {
+  if (post.requestedSlug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(post.requestedSlug)) {
+    return "The URL slug can only contain lowercase letters, numbers, and single hyphens.";
+  }
   if (!post.title) {
     return "Please enter a blog title.";
   }
@@ -179,8 +185,14 @@ function validatePost(post) {
 
 async function createUniqueSlug(
   collection,
-  title
+  title,
+  requestedSlug = ""
 ) {
+  if (requestedSlug) {
+    const existing = await collection.findOne({ slug: requestedSlug }, { projection: { _id: 1 } });
+    if (existing) return null;
+    return requestedSlug;
+  }
   const baseSlug = createSlug(title);
 
   if (!baseSlug) {
@@ -220,6 +232,8 @@ async function getPublishedPosts(collection) {
       {
         projection: {
           title: 1,
+          seoTitle: 1,
+          metaDescription: 1,
           slug: 1,
           excerpt: 1,
           intro: 1,
@@ -324,11 +338,18 @@ async function handlePost(
 
   const slug = await createUniqueSlug(
     collection,
-    post.title
+    post.title,
+    post.requestedSlug
   );
 
+  if (!slug) {
+    return response.status(409).json({ success: false, message: "That URL slug is already in use. Choose another." });
+  }
+
+  const { requestedSlug, ...postFields } = post;
+
   const document = {
-    ...post,
+    ...postFields,
     slug,
     author: defaultAuthor,
     readTime: calculateReadTime(post),

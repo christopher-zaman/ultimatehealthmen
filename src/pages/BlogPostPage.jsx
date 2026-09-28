@@ -221,10 +221,11 @@ function BlogPostPage() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    description: post.excerpt,
+    description: post.metaDescription || post.excerpt,
     url: `${SITE_URL}/blog/${post.slug}`,
     articleSection: post.category,
     datePublished: post.publishedAt || post.date,
+    dateModified: post.updatedAt || post.publishedAt || post.date,
     author: {
       "@type": "Person",
       name: post.author,
@@ -243,9 +244,10 @@ function BlogPostPage() {
   return (
     <>
       <SEO
-        title={`${post.title} | ${SITE_NAME}`}
-        description={post.excerpt}
+        title={post.seoTitle || `${post.title} | ${SITE_NAME}`}
+        description={post.metaDescription || post.excerpt}
         canonical={`${SITE_URL}/blog/${post.slug}`}
+        type="article"
         image={post.image || undefined}
         structuredData={structuredData}
       />
