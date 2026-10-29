@@ -223,7 +223,7 @@ async function createUniqueSlug(
   return candidateSlug;
 }
 
-async function getPublishedPosts(collection) {
+export async function getPublishedPosts(collection) {
   const posts = await collection
     .find(
       {
@@ -257,7 +257,7 @@ async function getPublishedPosts(collection) {
   return posts.map(serializePost);
 }
 
-async function getPublishedPost(collection, slug) {
+export async function getPublishedPost(collection, slug) {
   const post = await collection.findOne({
     slug,
     status: "published",

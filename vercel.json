@@ -1,6 +1,26 @@
 {
   "rewrites": [
     {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    },
+    {
+      "source": "/blog",
+      "destination": "/api/render-blog"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/api/render-blog"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/api/render-blog?slug=:slug"
+    },
+    {
+      "source": "/blog/:slug/",
+      "destination": "/api/render-blog?slug=:slug"
+    },
+    {
       "source": "/mens-hormone-testing-winter-haven",
       "destination": "/mens-hormone-testing-winter-haven.html"
     },
@@ -252,5 +272,18 @@
       "source": "/(.*)",
       "destination": "/spa.html"
     }
-  ]
+  ],
+  "functions": {
+    "api/render-blog.js": {
+      "includeFiles": [
+        "dist-ssr/**",
+        "dist/spa.html"
+      ]
+    },
+    "api/sitemap.js": {
+      "includeFiles": [
+        "dist/sitemap.xml"
+      ]
+    }
+  }
 }

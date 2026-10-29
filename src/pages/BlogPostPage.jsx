@@ -9,13 +9,17 @@ import BlogPostContent from "../components/blog/BlogPostContent";
 import BlogPostSidebar from "../components/blog/BlogPostSidebar";
 import BlogPostCTA from "../components/blog/BlogPostCTA";
 
+import { useBlogData } from "../context/BlogData.jsx";
+
 function BlogPostPage() {
   const { slug } = useParams();
 
-  const [post, setPost] = useState(null);
-  const [relatedPosts, setRelatedPosts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isNotFound, setIsNotFound] = useState(false);
+  const initial = useBlogData();
+  const initialMatches = initial?.slug === slug;
+  const [post, setPost] = useState(initialMatches ? initial.post : null);
+  const [relatedPosts, setRelatedPosts] = useState(initialMatches ? initial.posts.filter(item => item.slug !== slug).slice(0, 3) : []);
+  const [isLoading, setIsLoading] = useState(!initialMatches);
+  const [isNotFound, setIsNotFound] = useState(initialMatches && !initial.post);
   const [errorMessage, setErrorMessage] =
     useState("");
 
@@ -23,11 +27,11 @@ function BlogPostPage() {
     const controller = new AbortController();
 
     async function loadBlogPost() {
-      setIsLoading(true);
+      if (!initialMatches) setIsLoading(true);
       setIsNotFound(false);
       setErrorMessage("");
-      setPost(null);
-      setRelatedPosts([]);
+      if (!initialMatches) setPost(null);
+      if (!initialMatches) setRelatedPosts([]);
 
       try {
         const postResponse = await fetch(

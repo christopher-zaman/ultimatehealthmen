@@ -5,9 +5,12 @@ import { ArrowRight } from "lucide-react";
 import SEO from "../components/seo/SEO";
 import { SITE_URL, SITE_NAME } from "../config/site";
 
+import { useBlogData } from "../context/BlogData.jsx";
+
 function BlogPage() {
-  const [blogPosts, setBlogPosts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const initial = useBlogData();
+  const [blogPosts, setBlogPosts] = useState(initial?.posts || []);
+  const [isLoading, setIsLoading] = useState(!initial);
   const [errorMessage, setErrorMessage] =
     useState("");
 
