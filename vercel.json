@@ -274,16 +274,11 @@
     }
   ],
   "functions": {
-    "api/render-blog.js": {
-      "includeFiles": [
-        "dist-ssr/**",
-        "dist/spa.html"
-      ]
-    },
-    "api/sitemap.js": {
-      "includeFiles": [
-        "dist/sitemap.xml"
-      ]
-    }
+  "api/render-blog.js": {
+    "includeFiles": "{dist-ssr/**,dist/spa.html}"
+  },
+  "api/sitemap.js": {
+    "includeFiles": "dist/sitemap.xml"
   }
+}
 }
