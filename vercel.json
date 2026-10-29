@@ -1,8 +1,256 @@
 {
   "rewrites": [
     {
+      "source": "/mens-hormone-testing-winter-haven",
+      "destination": "/mens-hormone-testing-winter-haven.html"
+    },
+    {
+      "source": "/mens-hormone-testing-winter-haven/",
+      "destination": "/mens-hormone-testing-winter-haven.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/about/",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/services/",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/team",
+      "destination": "/team.html"
+    },
+    {
+      "source": "/team/",
+      "destination": "/team.html"
+    },
+    {
+      "source": "/treatments",
+      "destination": "/treatments.html"
+    },
+    {
+      "source": "/treatments/",
+      "destination": "/treatments.html"
+    },
+    {
+      "source": "/accessibility",
+      "destination": "/accessibility.html"
+    },
+    {
+      "source": "/accessibility/",
+      "destination": "/accessibility.html"
+    },
+    {
+      "source": "/service/direct-primary-care",
+      "destination": "/service/direct-primary-care.html"
+    },
+    {
+      "source": "/service/direct-primary-care/",
+      "destination": "/service/direct-primary-care.html"
+    },
+    {
+      "source": "/service/elective-iv-hydration",
+      "destination": "/service/elective-iv-hydration.html"
+    },
+    {
+      "source": "/service/elective-iv-hydration/",
+      "destination": "/service/elective-iv-hydration.html"
+    },
+    {
+      "source": "/service/erectile-dysfunction-treatment",
+      "destination": "/service/erectile-dysfunction-treatment.html"
+    },
+    {
+      "source": "/service/erectile-dysfunction-treatment/",
+      "destination": "/service/erectile-dysfunction-treatment.html"
+    },
+    {
+      "source": "/service/sexual-wellness",
+      "destination": "/service/sexual-wellness.html"
+    },
+    {
+      "source": "/service/sexual-wellness/",
+      "destination": "/service/sexual-wellness.html"
+    },
+    {
+      "source": "/service/hormone-optimization",
+      "destination": "/service/hormone-optimization.html"
+    },
+    {
+      "source": "/service/hormone-optimization/",
+      "destination": "/service/hormone-optimization.html"
+    },
+    {
+      "source": "/service/weight-management",
+      "destination": "/service/weight-management.html"
+    },
+    {
+      "source": "/service/weight-management/",
+      "destination": "/service/weight-management.html"
+    },
+    {
+      "source": "/service/peptide-therapy",
+      "destination": "/service/peptide-therapy.html"
+    },
+    {
+      "source": "/service/peptide-therapy/",
+      "destination": "/service/peptide-therapy.html"
+    },
+    {
+      "source": "/treatment/semaglutide",
+      "destination": "/treatment/semaglutide.html"
+    },
+    {
+      "source": "/treatment/semaglutide/",
+      "destination": "/treatment/semaglutide.html"
+    },
+    {
+      "source": "/treatment/tirzepatide",
+      "destination": "/treatment/tirzepatide.html"
+    },
+    {
+      "source": "/treatment/tirzepatide/",
+      "destination": "/treatment/tirzepatide.html"
+    },
+    {
+      "source": "/treatment/lipotropic-fat-burner",
+      "destination": "/treatment/lipotropic-fat-burner.html"
+    },
+    {
+      "source": "/treatment/lipotropic-fat-burner/",
+      "destination": "/treatment/lipotropic-fat-burner.html"
+    },
+    {
+      "source": "/treatment/prescription-weight-loss-medications",
+      "destination": "/treatment/prescription-weight-loss-medications.html"
+    },
+    {
+      "source": "/treatment/prescription-weight-loss-medications/",
+      "destination": "/treatment/prescription-weight-loss-medications.html"
+    },
+    {
+      "source": "/treatment/testosterone-replacement-therapy",
+      "destination": "/treatment/testosterone-replacement-therapy.html"
+    },
+    {
+      "source": "/treatment/testosterone-replacement-therapy/",
+      "destination": "/treatment/testosterone-replacement-therapy.html"
+    },
+    {
+      "source": "/treatment/pt-141",
+      "destination": "/treatment/pt-141.html"
+    },
+    {
+      "source": "/treatment/pt-141/",
+      "destination": "/treatment/pt-141.html"
+    },
+    {
+      "source": "/treatment/bpc-157",
+      "destination": "/treatment/bpc-157.html"
+    },
+    {
+      "source": "/treatment/bpc-157/",
+      "destination": "/treatment/bpc-157.html"
+    },
+    {
+      "source": "/treatment/tesamorelin",
+      "destination": "/treatment/tesamorelin.html"
+    },
+    {
+      "source": "/treatment/tesamorelin/",
+      "destination": "/treatment/tesamorelin.html"
+    },
+    {
+      "source": "/treatment/sermorelin",
+      "destination": "/treatment/sermorelin.html"
+    },
+    {
+      "source": "/treatment/sermorelin/",
+      "destination": "/treatment/sermorelin.html"
+    },
+    {
+      "source": "/treatment/ipamorelin",
+      "destination": "/treatment/ipamorelin.html"
+    },
+    {
+      "source": "/treatment/ipamorelin/",
+      "destination": "/treatment/ipamorelin.html"
+    },
+    {
+      "source": "/treatment/alma-duo-shockwave-therapy",
+      "destination": "/treatment/alma-duo-shockwave-therapy.html"
+    },
+    {
+      "source": "/treatment/alma-duo-shockwave-therapy/",
+      "destination": "/treatment/alma-duo-shockwave-therapy.html"
+    },
+    {
+      "source": "/treatment/p-shot",
+      "destination": "/treatment/p-shot.html"
+    },
+    {
+      "source": "/treatment/p-shot/",
+      "destination": "/treatment/p-shot.html"
+    },
+    {
+      "source": "/treatment/trimix-injections",
+      "destination": "/treatment/trimix-injections.html"
+    },
+    {
+      "source": "/treatment/trimix-injections/",
+      "destination": "/treatment/trimix-injections.html"
+    },
+    {
+      "source": "/treatment/ed-prescription-medications",
+      "destination": "/treatment/ed-prescription-medications.html"
+    },
+    {
+      "source": "/treatment/ed-prescription-medications/",
+      "destination": "/treatment/ed-prescription-medications.html"
+    },
+    {
+      "source": "/treatment/iv-hydration-treatment",
+      "destination": "/treatment/iv-hydration-treatment.html"
+    },
+    {
+      "source": "/treatment/iv-hydration-treatment/",
+      "destination": "/treatment/iv-hydration-treatment.html"
+    },
+    {
+      "source": "/treatment/direct-primary-care",
+      "destination": "/treatment/direct-primary-care.html"
+    },
+    {
+      "source": "/treatment/direct-primary-care/",
+      "destination": "/treatment/direct-primary-care.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy-policy.html"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     }
   ]
 }
