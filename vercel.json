@@ -20,6 +20,21 @@
     "source": "/contact-us",
     "destination": "/contact",
     "permanent": true
+  },
+  {
+  "source": "/blog-post/three-reasons-to-try-prp-injections-for-hair-restoration",
+  "destination": "/blog/prp-injections-hair-restoration",
+  "permanent": true
+  },
+  {
+    "source": "/blog-post/the-dangers-of-untreated-bph-why-you-shouldnt-ignore-your-prostate",
+    "destination": "/blog/dangers-of-untreated-bph",
+    "permanent": true
+  },
+  {
+    "source": "/blog-post/men-and-heart-disease-what-you-need-to-know",
+    "destination": "/blog/men-and-heart-disease",
+    "permanent": true
   }
 ],
   "rewrites": [
