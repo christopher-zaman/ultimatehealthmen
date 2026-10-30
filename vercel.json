@@ -24,6 +24,10 @@
 ],
   "rewrites": [
     {
+      "source": "/:path(.*\\.php)",
+      "destination": "/api/not-found"
+    },
+    {
       "source": "/sitemap.xml",
       "destination": "/api/sitemap"
     },
