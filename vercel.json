@@ -1,4 +1,27 @@
 {
+  "headers": [
+  {
+    "source": "/birdeye-widget.html",
+    "headers": [
+      {
+        "key": "X-Robots-Tag",
+        "value": "noindex"
+      }
+    ]
+  }
+],
+"redirects": [
+  {
+    "source": "/about-us",
+    "destination": "/about",
+    "permanent": true
+  },
+  {
+    "source": "/contact-us",
+    "destination": "/contact",
+    "permanent": true
+  }
+],
   "rewrites": [
     {
       "source": "/sitemap.xml",
