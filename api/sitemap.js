@@ -7,7 +7,7 @@ export default async function handler(request, response) {
   try {
     const client = await clientPromise;
     const posts = await getPublishedPosts(client.db(process.env.MONGODB_DB || 'ultimateHealthMen').collection('blogPosts'));
-    const source = await readFile(join(process.cwd(), 'dist/sitemap.xml'), 'utf8');
+    const source = await readFile(join(process.cwd(), 'dist/sitemap-base.xml'), 'utf8');
     const fixed = source.replace(/<url>[\s\S]*?<\/url>/g, block => /<loc>[^<]*\/blog(?:\/|<)/.test(block) ? '' : block);
     const entries = ['https://www.ultimatehealthmen.com/blog', ...posts.map(p => `https://www.ultimatehealthmen.com/blog/${encodeURIComponent(p.slug)}`)]
       .map(url => `<url><loc>${escapeXml(url)}</loc></url>`).join('\n');

@@ -305,7 +305,7 @@
     "includeFiles": "{dist-ssr/**,dist/spa.html}"
   },
   "api/sitemap.js": {
-    "includeFiles": "dist/sitemap.xml"
+  "includeFiles": "dist/sitemap-base.xml"
   }
 }
 }

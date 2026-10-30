@@ -5,7 +5,10 @@ import { render } from '../dist-ssr/entry-server.js';
 const dist = resolve('dist');
 const template = await readFile(join(dist, 'index.html'), 'utf8');
 await writeFile(join(dist, 'spa.html'), template);
-const sitemap = await readFile(join(dist, 'sitemap.xml'), 'utf8');
+const sitemap = await readFile(
+  join(dist, 'sitemap-base.xml'),
+  'utf8'
+);
 const routes = [...new Set([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => new URL(m[1]).pathname))]
   .filter(path => path !== '/blog' && !path.startsWith('/blog/'));
 routes.push('/privacy-policy');
